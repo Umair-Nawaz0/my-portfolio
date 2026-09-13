@@ -1,9 +1,10 @@
-export type ProjectCategory = "AI Agents" | "Automation" | "Machine Learning" | "Systems & C++";
+export type ProjectCategory = "AI Agents & Automation" | "Machine Learning" | "Systems & C++";
 
 export type Project = {
   slug: string;
   title: string;
   category: ProjectCategory;
+  categories?: string[];
   summary: string;
   description: string;
   technologies: string[];
@@ -19,7 +20,8 @@ export const projects: Project[] = [
   {
     slug: "appointment-assistant",
     title: "AI Appointment Assistant & Receptionist",
-    category: "AI Agents",
+    category: "AI Agents & Automation",
+    categories: ["AI Agents", "Automation", "AI Agents & Automation"],
     summary: "Production-oriented, full-stack multi-tenant AI receptionist dashboard and asynchronous FastAPI backend with PostgreSQL.",
     description: "Architected and built a multi-tenant conversational appointment booking platform. The system ingests omnichannel inquiries (WhatsApp, Web, SMS, Email), coordinates conversation state transitions via an AI state machine, validates operational hours and holiday overrides, and schedules appointments while enforcing strict tenant isolation with composite foreign keys.",
     technologies: ["FastAPI", "React 18", "TypeScript", "PostgreSQL", "asyncpg", "Pydantic v2", "Vite", "TailwindCSS"],
@@ -42,7 +44,8 @@ export const projects: Project[] = [
   {
     slug: "meeting-scheduler",
     title: "AI Meeting Scheduler & Workflow Engine",
-    category: "Automation",
+    category: "AI Agents & Automation",
+    categories: ["AI Agents", "Automation", "AI Agents & Automation"],
     summary: "Automated event scheduling and dispatch engine powered by containerized n8n, Zoom Server-to-Server OAuth, Google Calendar, and Gmail.",
     description: "Designed and deployed an automated meeting scheduling pipeline that handles incoming webhook requests, requests OAuth access tokens from Zoom's Server-to-Server API, provisions authenticated video meeting rooms, synchronizes calendar events in Google Calendar, and sends personalized responsive HTML confirmations with attached .ics invite files via Gmail.",
     technologies: ["n8n", "Docker Compose", "Zoom Server-to-Server OAuth", "Google Calendar API", "Gmail OAuth2", "Shell Scripting"],
@@ -66,6 +69,7 @@ export const projects: Project[] = [
     slug: "svm-credit-card-fraud-detection",
     title: "Credit Card Fraud Detection with SVM & SMOTE",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "High-margin anomaly detection pipeline utilizing Linear Support Vector Machines and SMOTE oversampling on 284K imbalanced transactions.",
     description: "Engineered an anomaly classification system for European cardholders with extreme class skew (only 0.172% fraud prevalence). Applied StandardScaler normalization and Synthetic Minority Over-sampling Technique (SMOTE) strictly to training partitions, then trained a Linear Support Vector Classifier (LinearSVC) to prioritize fraud detection and minimize catastrophic financial loss.",
     technologies: ["Python", "Scikit-Learn", "SMOTE (imbalanced-learn)", "LinearSVC", "StandardScaler", "Pandas"],
@@ -89,6 +93,7 @@ export const projects: Project[] = [
     slug: "decision-tree-loan-default-risk-prediction",
     title: "Cost-Sensitive Loan Default Risk Prediction",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "Decision tree classification on credit applicant data incorporating cost-sensitive class balancing and 5-fold GridSearchCV tuning.",
     description: "Addressed the asymmetric financial cost in commercial credit scoring where loan default false negatives are far more costly than false positives. Evaluated baseline decision trees, introduced cost-sensitive class balancing (class_weight='balanced'), and tuned depth and leaf constraints via 5-fold GridSearchCV optimizing for recall.",
     technologies: ["Python", "Scikit-Learn", "GridSearchCV", "Decision Trees", "Graphviz", "Pandas"],
@@ -112,6 +117,7 @@ export const projects: Project[] = [
     slug: "decision-tree-heart-disease-prediction",
     title: "Cardiovascular Disease Diagnostic Decision Tree",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "Clinical decision support classifier detecting coronary heart disease from 13 cardiovascular biomarkers with 98.54% accuracy.",
     description: "Developed a diagnostic classification model utilizing a Decision Tree Classifier on 1,025 cardiovascular patient examination records. Features including resting blood pressure, serum cholesterol, exercise-induced ST depression, and fluoroscopy vessels were standardized, generating rule-based decision paths suitable for clinical review.",
     technologies: ["Python", "Scikit-Learn", "StandardScaler", "Decision Trees", "Pandas", "NumPy"],
@@ -135,6 +141,7 @@ export const projects: Project[] = [
     slug: "bank-management-system",
     title: "International Banking Management System",
     category: "Systems & C++",
+    categories: ["Systems & C++"],
     summary: "High-performance, terminal-based banking management core developed in modern C++17 with full OOP architecture and persistent CSV records.",
     description: "Engineered a robust command-line banking system demonstrating advanced object-oriented design: abstract transaction interfaces, polymorphism, strict data encapsulation, collision-resistant IBAN generation, Pakistani CNIC formatting validation, animated typewriter ANSI terminal UX, and persistent CSV ledger serialization.",
     technologies: ["C++17", "Object-Oriented Design", "POSIX / Linux", "File I/O Serialization", "CMake", "Makefile"],
@@ -158,6 +165,7 @@ export const projects: Project[] = [
     slug: "hierarchical-clustering-customer-segmentation",
     title: "E-Commerce Customer Segmentation (Hierarchical Clustering)",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "Agglomerative hierarchical clustering and Ward linkage dendrogram analysis on 540K+ transnational e-commerce purchase logs.",
     description: "Processed over 541,000 raw transaction line items from the UK Online Retail dataset into customer-level behavioral profiles (total units purchased, gross revenue, order frequency). Standardized features, compressed dimensionality via PCA (explaining 97.39% of variance), constructed a complete Ward linkage dendrogram, and segmented customers into 3 actionable tiers.",
     technologies: ["Python", "SciPy", "Scikit-Learn", "PCA", "Agglomerative Clustering", "Matplotlib", "Pandas"],
@@ -181,6 +189,7 @@ export const projects: Project[] = [
     slug: "kmeans-customer-segmentation",
     title: "Retail Customer Segmentation with K-Means & PCA",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "Unsupervised market segmentation utilizing K-Means++ clustering and PCA dimensionality reduction for 2D/3D behavioral visualization.",
     description: "Segmented retail mall consumer profiles based on demographic attributes, annual income, and historical spending scores. Evaluated Within-Cluster Sum of Squares (WCSS / Inertia) across K=1..15 to establish the optimal elbow inflection at K=4, and mapped clusters with centroids in both 2D and 3D PCA vector projections.",
     technologies: ["Python", "Scikit-Learn", "K-Means++", "PCA", "Matplotlib (Axes3D)", "StandardScaler"],
@@ -204,6 +213,7 @@ export const projects: Project[] = [
     slug: "linear-regression-employee-salary-prediction",
     title: "Employee Salary Prediction via Multiple Linear Regression",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "Multiple Linear Regression model predicting employee compensation from professional qualifications and experience with R² = 0.9187.",
     description: "Analyzed 10,000 employee demographic and performance records. Conducted missing value treatment, one-hot encoded categorical designations, evaluated feature correlation matrices, and trained an Ordinary Least Squares (OLS) regression model that captures 91.87% of salary variation.",
     technologies: ["Python", "Scikit-Learn", "Multiple Linear Regression", "Plotly Express", "Pandas", "NumPy"],
@@ -227,6 +237,7 @@ export const projects: Project[] = [
     slug: "logistic-regression-titanic-survival-prediction",
     title: "Titanic Survival Classification (Logistic Regression)",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "Binary classification model applying Logistic Regression to historical passenger manifests, achieving 79.78% accuracy and 0.8203 ROC-AUC.",
     description: "Modeled survival likelihood on the Titanic dataset using Logistic Regression. Implemented median imputation for age, dropped high-cardinality sparse columns, encoded passenger class and embarkation ports, and conducted comprehensive threshold and ROC-AUC evaluations.",
     technologies: ["Python", "Scikit-Learn", "Logistic Regression", "ROC-AUC Analysis", "Plotly", "Pandas"],
@@ -250,6 +261,7 @@ export const projects: Project[] = [
     slug: "knn-diabetes-prediction",
     title: "Diabetes Diagnostic Prediction via K-Nearest Neighbors",
     category: "Machine Learning",
+    categories: ["Machine Learning"],
     summary: "Instance-based clinical diagnostic classifier using K-Nearest Neighbors (KNN) on Pima Indian diagnostic biomarker records.",
     description: "Implemented a K-Nearest Neighbors (KNN) diagnostic system to predict diabetes onset from physiological measurements. Standardized features to prevent large-magnitude variables from dominating Euclidean distances, analyzed correlation with diagnostic outcomes, and systematically swept neighborhood sizes (K=5..15) to optimize classification accuracy and recall.",
     technologies: ["Python", "Scikit-Learn", "K-Nearest Neighbors", "StandardScaler", "Correlation Analysis", "Pandas"],

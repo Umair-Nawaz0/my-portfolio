@@ -2,7 +2,12 @@
 
 type Props = { active: string; onChange: (value: string) => void };
 
-const filters = ["All", "AI Agents", "Automation", "Machine Learning", "Systems & C++"];
+const filters = [
+  "All",
+  "AI Agents & Automation",
+  "Machine Learning",
+  "Systems & C++",
+];
 
 export default function ProjectFilter({ active, onChange }: Props) {
   return (
