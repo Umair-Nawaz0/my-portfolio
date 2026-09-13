@@ -5,7 +5,6 @@ import WhatIBuild from "@/components/home/WhatIBuild";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import Engineering from "@/components/home/Engineering";
 import TechStack from "@/components/home/TechStack";
-import ExperiencePreview from "@/components/home/ExperiencePreview";
 import CTA from "@/components/home/CTA";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
         <FeaturedProjects />
         <Engineering />
         <TechStack />
-        <ExperiencePreview />
         <CTA />
       </main>
 
