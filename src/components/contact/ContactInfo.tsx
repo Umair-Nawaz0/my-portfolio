@@ -18,7 +18,7 @@ const links = [
   {
     icon: BriefcaseBusiness,
     label: "LinkedIn",
-    value: "linkedin.com/in/umair-nawaz",
+    value: "linkedin.com/in/sardar-umair-nawaz-khan",
     href: profile.linkedin,
   },
   {
