@@ -16,19 +16,30 @@ export default function ProjectGrid() {
             return (
               project.category === "AI Agents & Automation" ||
               project.categories?.includes("AI Agents") ||
-              project.categories?.includes("Automation")
+              project.categories?.includes("Automation") ||
+              project.categories?.includes("AI Agents & Automation")
             );
           }
-          if (active === "AI Agents") {
+          if (active === "Full-Stack Web") {
             return (
-              project.category === "AI Agents & Automation" ||
-              project.categories?.includes("AI Agents")
+              project.category === "Full-Stack Web" ||
+              project.categories?.includes("Full-Stack Web") ||
+              project.categories?.includes("Full-Stack") ||
+              project.categories?.includes("Web Development")
             );
           }
-          if (active === "Automation") {
+          if (active === "Systems & C++") {
             return (
-              project.category === "AI Agents & Automation" ||
-              project.categories?.includes("Automation")
+              project.category === "Systems & C++" ||
+              project.categories?.includes("Systems & C++") ||
+              project.categories?.includes("Systems") ||
+              project.categories?.includes("C++")
+            );
+          }
+          if (active === "Machine Learning") {
+            return (
+              project.category === "Machine Learning" ||
+              project.categories?.includes("Machine Learning")
             );
           }
           return (

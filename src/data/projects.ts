@@ -1,4 +1,4 @@
-export type ProjectCategory = "AI Agents & Automation" | "Machine Learning" | "Systems & C++";
+export type ProjectCategory = "AI Agents & Automation" | "Full-Stack Web" | "Systems & C++" | "Machine Learning";
 
 export type Project = {
   slug: string;
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     slug: "appointment-assistant",
     title: "AI Appointment Assistant & Receptionist",
     category: "AI Agents & Automation",
-    categories: ["AI Agents", "Automation", "AI Agents & Automation"],
+    categories: ["AI Agents", "Automation", "AI Agents & Automation", "Full-Stack Web", "Full-Stack"],
     summary: "Production-oriented, full-stack multi-tenant AI receptionist dashboard and asynchronous FastAPI backend with PostgreSQL.",
     description: "Architected and built a multi-tenant conversational appointment booking platform. The system ingests omnichannel inquiries (WhatsApp, Web, SMS, Email), coordinates conversation state transitions via an AI state machine, validates operational hours and holiday overrides, and schedules appointments while enforcing strict tenant isolation with composite foreign keys.",
     technologies: ["FastAPI", "React 18", "TypeScript", "PostgreSQL", "asyncpg", "Pydantic v2", "Vite", "TailwindCSS"],
@@ -40,6 +40,32 @@ export const projects: Project[] = [
       "Zero plain-text token exposure using HttpOnly server sessions",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/appointment-assistant",
+  },
+  {
+    slug: "hostel-management-system",
+    title: "Hostel Management System (Full-Stack Multi-Hostel ERP)",
+    category: "Full-Stack Web",
+    categories: ["Full-Stack Web", "Full-Stack", "Web Development", "Databases", "MySQL"],
+    summary: "Production-grade multi-hostel administration platform with Node.js, Express, MySQL on AWS RDS, and responsive administrative dashboards.",
+    description: "Designed and engineered a centralized multi-hostel management system for educational institutions and residential facilities. Implementing an MVC architecture, the backend delivers RESTful APIs using Node.js and Express connected to a cloud-hosted AWS RDS MySQL relational database with parameterized query isolation. The frontend provides a responsive administrative control panel managing multi-hostel branches, room and bed inventory, student enrollments, staff duties, and fee payment ledgers.",
+    technologies: ["Node.js", "Express.js", "MySQL", "AWS RDS", "JavaScript (ES6)", "HTML5 / CSS3", "REST APIs", "dotenv"],
+    outcome: "Automates 100% of room allocations, eliminates bed booking conflicts, tracks fee collection, and provides real-time occupancy analytics across multiple hostels.",
+    accent: "from-amber-500/30 via-orange-500/10 to-transparent",
+    architecture: "Three-tier MVC web architecture: responsive frontend dashboard interfacing via RESTful endpoints with an Express.js backend cluster connected to an AWS RDS MySQL relational engine with parameterized query isolation.",
+    features: [
+      "Multi-hostel centralized dashboard with hostel-wise occupancy and financial filtering",
+      "Dynamic room & bed allocation engine tracking occupied vs. vacant capacity in real time",
+      "Comprehensive student lifecycle tracking with guardian details and room assignment history",
+      "Staff management system with warden appointments and role-based accountability",
+      "Fee payment transaction management with invoice status tracking and payment history",
+      "SQL injection defense with mysql2 parameterized queries and strict server-side schema validation",
+    ],
+    metrics: [
+      "Sub-100ms API response latency on remote AWS RDS database connections",
+      "100% SQL injection prevention via parameterized prepared statements",
+      "Supports simultaneous management of multiple residential hostel branches",
+    ],
+    githubUrl: "https://github.com/Umair-Nawaz0/hostel_project",
   },
   {
     slug: "meeting-scheduler",

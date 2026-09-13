@@ -5,8 +5,9 @@ type Props = { active: string; onChange: (value: string) => void };
 const filters = [
   "All",
   "AI Agents & Automation",
-  "Machine Learning",
+  "Full-Stack Web",
   "Systems & C++",
+  "Machine Learning",
 ];
 
 export default function ProjectFilter({ active, onChange }: Props) {

@@ -14,8 +14,8 @@ const pillars = [
   },
   {
     icon: Cpu,
-    title: "Backend Engineering",
-    desc: "FastAPI, asynchronous PostgreSQL with asyncpg, Pydantic v2 validation, and Docker Compose.",
+    title: "Full-Stack & Backend Systems",
+    desc: "Node.js, Express, FastAPI, PostgreSQL, AWS RDS MySQL, REST APIs, and Docker Compose.",
   },
   {
     icon: Code,
