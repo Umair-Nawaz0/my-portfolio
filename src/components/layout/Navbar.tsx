@@ -35,7 +35,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`rounded-full px-4 py-2 text-sm transition-colors hover:bg-white/5 hover:text-white ${pathname === item.href ? "nav-active bg-white/8 text-white" : "text-zinc-400"}`}
+                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors hover:bg-black/5 hover:text-zinc-900 dark:hover:bg-white/5 dark:hover:text-white ${pathname === item.href ? "nav-active bg-violet-500/10 text-violet-700 dark:bg-white/10 dark:text-white" : "text-zinc-600 dark:text-zinc-400"}`}
                 >
                   {item.name}
                 </Link>
@@ -51,18 +51,18 @@ export default function Navbar() {
               <ThemeToggle />
             </div>
 
-            <div className="flex items-center gap-1 md:hidden"><ThemeToggle /><button type="button" onClick={() => setOpen((value) => !value)} className="rounded-full p-2 text-zinc-300 hover:bg-white/5" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>{open ? <X size={20} /> : <Menu size={20} />}</button></div>
+            <div className="flex items-center gap-1 md:hidden"><ThemeToggle /><button type="button" onClick={() => setOpen((value) => !value)} className="rounded-full p-2 text-zinc-700 hover:bg-black/5 dark:text-zinc-300 dark:hover:bg-white/5" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open}>{open ? <X size={20} /> : <Menu size={20} />}</button></div>
           </div>
 
           {open && (
-            <div className="border-t border-white/10 px-3 pb-3 pt-3 md:hidden">
+            <div className="border-t border-zinc-200 px-3 pb-3 pt-3 dark:border-white/10 md:hidden">
               <div className="flex flex-col">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className={`rounded-xl px-3 py-3 text-sm hover:bg-white/5 hover:text-white ${pathname === item.href ? "nav-active bg-white/5 text-white" : "text-zinc-400"}`}
+                    className={`rounded-xl px-3 py-3 text-sm font-medium hover:bg-black/5 hover:text-zinc-900 dark:hover:bg-white/5 dark:hover:text-white ${pathname === item.href ? "nav-active bg-violet-500/10 text-violet-700 dark:bg-white/10 dark:text-white" : "text-zinc-600 dark:text-zinc-400"}`}
                   >
                     {item.name}
                   </Link>

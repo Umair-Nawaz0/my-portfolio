@@ -65,14 +65,14 @@ export default function CaseStudy({ project }: { project: Project }) {
         </div>
 
         {/* Architecture & Stack */}
-        <div className="mt-16 grid gap-12 border-t border-white/10 pt-12 lg:grid-cols-[0.35fr_0.65fr]">
+        <div className="mt-16 grid gap-12 border-t border-zinc-200 pt-12 dark:border-white/10 lg:grid-cols-[0.35fr_0.65fr]">
           <aside className="space-y-8">
             <div>
               <p className="section-label">Technology Stack</p>
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.technologies.map((item) => (
                   <span
-                    className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-xs text-zinc-300"
+                    className="rounded-full border border-zinc-200 bg-zinc-100 px-3 py-1.5 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/[0.02] dark:text-zinc-300"
                     key={item}
                   >
                     {item}
@@ -82,15 +82,15 @@ export default function CaseStudy({ project }: { project: Project }) {
             </div>
 
             {project.metrics && project.metrics.length > 0 && (
-              <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-300">
+              <div className="glass-card rounded-2xl border border-zinc-200 p-5 dark:border-white/10">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-300">
                   <BarChart3 size={15} />
                   Performance Benchmarks &amp; Results
                 </div>
-                <ul className="mt-3 space-y-2 text-xs text-zinc-400">
+                <ul className="mt-3 space-y-2 text-xs text-zinc-600 dark:text-zinc-400">
                   {project.metrics.map((metric) => (
                     <li key={metric} className="flex items-start gap-2">
-                      <span className="text-violet-400">•</span>
+                      <span className="text-violet-600 dark:text-violet-400">•</span>
                       <span>{metric}</span>
                     </li>
                   ))}
@@ -99,19 +99,19 @@ export default function CaseStudy({ project }: { project: Project }) {
             )}
 
             {project.githubUrl && (
-              <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-5">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-300">
-                  <GitFork size={14} className="text-violet-400" />
+              <div className="glass-card rounded-2xl border border-zinc-200 p-5 dark:border-white/10">
+                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-800 dark:text-zinc-300">
+                  <GitFork size={14} className="text-violet-600 dark:text-violet-400" />
                   Repository Information
                 </div>
-                <p className="mt-2 text-xs text-zinc-400">
+                <p className="mt-2 text-xs text-zinc-600 dark:text-zinc-400">
                   Published open-source on GitHub with documentation, architecture notes, and verification scripts.
                 </p>
                 <a
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-violet-300 hover:text-white"
+                  className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-violet-600 hover:text-violet-900 dark:text-violet-300 dark:hover:text-white"
                 >
                   Visit repository <ArrowUpRight size={13} />
                 </a>
@@ -122,18 +122,18 @@ export default function CaseStudy({ project }: { project: Project }) {
           <div className="space-y-10">
             <div>
               <p className="section-label">Technical Overview &amp; Problem Statement</p>
-              <p className="mt-4 text-base leading-7 text-zinc-300">
+              <p className="mt-4 text-base leading-7 text-zinc-700 dark:text-zinc-300">
                 {project.description}
               </p>
             </div>
 
             {project.architecture && (
-              <div className="rounded-2xl border border-white/10 bg-white/[0.02] p-6">
-                <div className="flex items-center gap-2 text-sm font-semibold text-zinc-200">
-                  <Layers size={17} className="text-violet-400" />
+              <div className="glass-card rounded-2xl border border-zinc-200 p-6 dark:border-white/10">
+                <div className="flex items-center gap-2 text-sm font-semibold text-zinc-900 dark:text-zinc-200">
+                  <Layers size={17} className="text-violet-600 dark:text-violet-400" />
                   System Architecture &amp; Methodology
                 </div>
-                <p className="mt-2 text-sm leading-6 text-zinc-400">
+                <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                   {project.architecture}
                 </p>
               </div>
@@ -145,12 +145,12 @@ export default function CaseStudy({ project }: { project: Project }) {
                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
                   {project.features.map((feature, i) => (
                     <div
-                      className="glass-card flex items-start gap-3 rounded-2xl p-4 text-sm text-zinc-300 transition-all hover:border-violet-400/30"
+                      className="glass-card flex items-start gap-3 rounded-2xl p-4 text-sm text-zinc-700 dark:text-zinc-300 transition-all hover:border-violet-400/30"
                       key={i}
                     >
                       <CheckCircle2
                         size={17}
-                        className="mt-0.5 shrink-0 text-violet-400"
+                        className="mt-0.5 shrink-0 text-violet-600 dark:text-violet-400"
                       />
                       <span className="leading-snug">{feature}</span>
                     </div>
@@ -162,14 +162,14 @@ export default function CaseStudy({ project }: { project: Project }) {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-3xl border border-white/10 bg-white/[0.025] p-8 sm:p-10">
+        <div className="glass-card mt-16 rounded-3xl border border-zinc-200 p-8 sm:p-10 dark:border-white/10">
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
             <div>
               <p className="section-label">Next Steps</p>
-              <h2 className="mt-2 text-2xl font-semibold text-zinc-100 sm:text-3xl">
+              <h2 className="mt-2 text-2xl font-semibold text-zinc-900 dark:text-zinc-100 sm:text-3xl">
                 Interested in this implementation or architecture?
               </h2>
-              <p className="mt-2 text-sm text-zinc-400">
+              <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                 Available to discuss technical decisions, deployment tradeoffs, and engineering collaborations.
               </p>
             </div>

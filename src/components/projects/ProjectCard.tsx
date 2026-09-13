@@ -10,19 +10,19 @@ export default function ProjectCard({ project, index }: { project: Project; inde
       
       <div>
         <div className="relative flex items-start justify-between">
-          <span className="text-xs font-mono tracking-[0.22em] text-violet-200">0{index + 1}</span>
-          <span className="rounded-full border border-white/10 bg-black/40 px-3 py-1 text-xs text-zinc-300 backdrop-blur-sm">
+          <span className="text-xs font-mono tracking-[0.22em] text-violet-600 dark:text-violet-200">0{index + 1}</span>
+          <span className="rounded-full border border-zinc-200 bg-zinc-100/90 px-3 py-1 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-black/40 dark:text-zinc-300 backdrop-blur-sm">
             {project.category}
           </span>
         </div>
 
         <div className="relative mt-8">
           <Link href={`/projects/${project.slug}`} className="group">
-            <h2 className="text-xl font-semibold tracking-tight text-white transition group-hover:text-violet-300 sm:text-2xl">
+            <h2 className="text-xl font-semibold tracking-tight text-zinc-900 transition group-hover:text-violet-600 dark:text-white dark:group-hover:text-violet-300 sm:text-2xl">
               {project.title}
             </h2>
           </Link>
-          <p className="mt-3 text-sm leading-6 text-zinc-400">
+          <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
             {project.summary}
           </p>
         </div>
@@ -30,24 +30,24 @@ export default function ProjectCard({ project, index }: { project: Project; inde
         <div className="relative mt-5 flex flex-wrap gap-1.5">
           {project.technologies.slice(0, 4).map((item) => (
             <span
-              className="rounded-full border border-white/10 bg-white/[0.02] px-2.5 py-0.5 text-xs text-zinc-400"
+              className="rounded-full border border-zinc-200 bg-zinc-100 px-2.5 py-0.5 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/[0.02] dark:text-zinc-400"
               key={item}
             >
               {item}
             </span>
           ))}
           {project.technologies.length > 4 && (
-            <span className="rounded-full border border-white/5 px-2 py-0.5 text-xs text-zinc-500">
+            <span className="rounded-full border border-zinc-200 bg-zinc-100/60 px-2 py-0.5 text-xs font-medium text-zinc-600 dark:border-white/5 dark:bg-transparent dark:text-zinc-500">
               +{project.technologies.length - 4}
             </span>
           )}
         </div>
       </div>
 
-      <div className="relative mt-7 flex items-center justify-between border-t border-white/10 pt-5">
+      <div className="relative mt-7 flex items-center justify-between border-t border-zinc-200 pt-5 dark:border-white/10">
         <Link
           href={`/projects/${project.slug}`}
-          className="inline-flex items-center gap-1.5 text-xs font-medium text-white transition hover:text-violet-300"
+          className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-900 transition hover:text-violet-600 dark:text-white dark:hover:text-violet-300"
         >
           Case study <ArrowUpRight size={14} />
         </Link>
@@ -57,7 +57,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-zinc-300 transition hover:border-violet-400/40 hover:bg-violet-400/10 hover:text-white"
+            className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-700 transition hover:border-violet-400 hover:bg-violet-50 hover:text-violet-700 dark:border-white/10 dark:bg-white/5 dark:text-zinc-300 dark:hover:border-violet-400/40 dark:hover:bg-violet-400/10 dark:hover:text-white"
             title="View GitHub Repository"
           >
             <GithubIcon size={12} /> GitHub

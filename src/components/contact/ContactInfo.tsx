@@ -51,12 +51,12 @@ export default function ContactInfo() {
             key={label}
           >
             <div className="flex items-center gap-4">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-violet-400/10 text-violet-300">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-violet-500/10 text-violet-600 dark:bg-violet-400/10 dark:text-violet-300">
                 <Icon size={18} />
               </span>
               <span className="min-w-0 flex-1">
                 <span className="block text-xs text-zinc-500">{label}</span>
-                <span className="block text-sm font-medium text-zinc-200 break-words">{value}</span>
+                <span className="block text-sm font-medium text-zinc-900 dark:text-zinc-200 break-words">{value}</span>
               </span>
             </div>
             {href.startsWith("http") && (
@@ -67,9 +67,9 @@ export default function ContactInfo() {
       </div>
 
       {/* Interactive Google Maps Card */}
-      <div className="mt-8 overflow-hidden rounded-2xl border border-white/10 bg-black/40 shadow-xl">
-        <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-300">
+      <div className="glass-card mt-8 overflow-hidden rounded-2xl border border-zinc-200 shadow-xl dark:border-white/10">
+        <div className="flex items-center justify-between border-b border-zinc-200 px-4 py-3 dark:border-white/10">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-300">
             <MapPin size={14} />
             Interactive Google Map
           </div>
@@ -77,7 +77,7 @@ export default function ContactInfo() {
             href={profile.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs font-medium text-zinc-300 transition hover:text-white"
+            className="inline-flex items-center gap-1 text-xs font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
           >
             Open in Google Maps <ArrowUpRight size={13} />
           </a>

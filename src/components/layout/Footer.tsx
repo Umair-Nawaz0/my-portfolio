@@ -4,12 +4,12 @@ import { profile } from "@/data/profile";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10">
+    <footer className="border-t border-zinc-200 dark:border-white/10">
       <div className="container flex flex-col gap-6 py-10 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-sm font-semibold tracking-[0.12em]">{profile.displayName.toUpperCase()}</p>
 
-          <p className="mt-2 text-sm text-zinc-500">
+          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-500">
             AI Systems &amp; Machine Learning Engineer
           </p>
         </div>
@@ -20,7 +20,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-sm text-zinc-500 transition-colors hover:text-white"
+            className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-white"
           >
             GitHub
           </Link>
@@ -30,7 +30,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-sm text-zinc-500 transition-colors hover:text-white"
+            className="text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-white"
           >
             LinkedIn
           </Link>
@@ -38,15 +38,15 @@ export default function Footer() {
           <Link
             href="/contact"
             aria-label="Contact"
-            className="text-zinc-500 transition-colors hover:text-white"
+            className="text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-white"
           >
             <Mail size={20} />
           </Link>
         </div>
       </div>
 
-      <div className="container border-t border-white/5 py-6">
-        <p className="text-xs text-zinc-600">
+      <div className="container border-t border-zinc-200 py-6 dark:border-white/5">
+        <p className="text-xs text-zinc-500 dark:text-zinc-600">
           © {new Date().getFullYear()} {profile.fullName}. All rights reserved.
         </p>
       </div>

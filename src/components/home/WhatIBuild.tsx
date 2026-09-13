@@ -48,37 +48,37 @@ export default function WhatIBuild() {
             <span className="text-zinc-500"> real-world impact.</span>
           </h2>
 
-          <p className="mt-5 text-zinc-400">
+          <p className="mt-5 text-zinc-600 dark:text-zinc-400">
             From multi-tenant conversational receptionists and containerized workflow automations
             to mathematically validated machine learning algorithms and C++ systems.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-200 dark:border-white/10 dark:bg-white/10 md:grid-cols-2">
           {capabilities.map((item) => {
             const Icon = item.icon;
 
             return (
               <div
                 key={item.number}
-                className="group bg-[#080808] p-7 transition-colors hover:bg-violet-500/[0.04] sm:p-9"
+                className="group bg-white p-7 transition-colors hover:bg-violet-50/50 dark:bg-[#080808] dark:hover:bg-violet-500/[0.04] sm:p-9"
               >
                 <div className="flex items-start justify-between">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03]">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-zinc-200 bg-zinc-50 dark:border-white/10 dark:bg-white/[0.03]">
                     <Icon
                       size={20}
-                      className="text-violet-300 transition-transform duration-300 group-hover:scale-110"
+                      className="text-violet-600 transition-transform duration-300 group-hover:scale-110 dark:text-violet-300"
                     />
                   </div>
 
-                  <span className="text-xs text-zinc-700 font-mono">
+                  <span className="text-xs font-mono text-zinc-400 dark:text-zinc-700">
                     {item.number}
                   </span>
                 </div>
 
-                <h3 className="mt-8 text-xl font-medium">{item.title}</h3>
+                <h3 className="mt-8 text-xl font-medium text-zinc-900 dark:text-zinc-100">{item.title}</h3>
 
-                <p className="mt-3 max-w-md text-sm leading-6 text-zinc-500">
+                <p className="mt-3 max-w-md text-sm leading-6 text-zinc-600 dark:text-zinc-500">
                   {item.description}
                 </p>
               </div>

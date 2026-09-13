@@ -21,7 +21,7 @@ const journey = [
 
 export default function Journey() {
   return (
-    <section className="border-y border-white/10 bg-white/[0.015] py-20">
+    <section className="border-y border-zinc-200 bg-zinc-50/50 py-20 dark:border-white/10 dark:bg-white/[0.015]">
       <div className="container">
         <p className="section-label">Development Path</p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
@@ -33,11 +33,11 @@ export default function Journey() {
               className="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-violet-400/30 sm:p-8"
               key={item.title}
             >
-              <span className="text-xs font-semibold tracking-[0.2em] text-violet-300">
+              <span className="text-xs font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-300">
                 {item.stage}
               </span>
-              <h3 className="mt-4 text-xl font-medium text-zinc-100">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-zinc-400">{item.detail}</p>
+              <h3 className="mt-4 text-xl font-semibold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{item.detail}</p>
             </article>
           ))}
         </div>

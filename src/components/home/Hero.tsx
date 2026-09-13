@@ -20,7 +20,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-violet-400/20 bg-violet-400/5 px-3 py-1.5 text-xs text-violet-200">
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-violet-500/20 bg-violet-500/10 px-3 py-1.5 text-xs font-medium text-violet-700 dark:border-violet-400/20 dark:bg-violet-400/5 dark:text-violet-200">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-violet-400 opacity-50" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-violet-400" />
@@ -39,7 +39,7 @@ export default function Hero() {
               <span className="text-gradient">ML Engineering.</span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
+            <p className="mt-7 max-w-2xl text-base leading-7 text-zinc-600 dark:text-zinc-400 sm:text-lg">
               AI Systems &amp; Machine Learning Engineer specializing in autonomous agent workflows,
               production-grade microservices, workflow automation pipelines, and robust predictive modeling.
             </p>
@@ -55,9 +55,9 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-xs text-zinc-500">
+            <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-3 text-xs text-zinc-600 dark:text-zinc-500">
               <span className="flex items-center gap-2">
-                <Sparkles size={14} className="text-violet-400" />
+                <Sparkles size={14} className="text-violet-600 dark:text-violet-400" />
                 Autonomous Agents
               </span>
 

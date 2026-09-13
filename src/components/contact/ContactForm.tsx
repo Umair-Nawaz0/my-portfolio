@@ -26,14 +26,14 @@ export default function ContactForm() {
       className="glass-card rounded-3xl p-6 sm:p-8"
       aria-label="Contact inquiry form"
     >
-      <h2 className="text-xl font-semibold text-zinc-100">Send a Message</h2>
-      <p className="mt-1 text-sm text-zinc-400">
+      <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">Send a Message</h2>
+      <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
         Directly sends an email via your mail client to {profile.email}.
       </p>
 
       <div className="mt-6 grid gap-4">
         <div>
-          <label htmlFor="contact-name" className="block text-xs font-medium text-zinc-300">
+          <label htmlFor="contact-name" className="block text-xs font-medium text-zinc-700 dark:text-zinc-300">
             Full name
           </label>
           <input
@@ -46,7 +46,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="contact-email" className="block text-xs font-medium text-zinc-300">
+          <label htmlFor="contact-email" className="block text-xs font-medium text-zinc-700 dark:text-zinc-300">
             Email address
           </label>
           <input
@@ -60,7 +60,7 @@ export default function ContactForm() {
         </div>
 
         <div>
-          <label htmlFor="contact-message" className="block text-xs font-medium text-zinc-300">
+          <label htmlFor="contact-message" className="block text-xs font-medium text-zinc-700 dark:text-zinc-300">
             Message
           </label>
           <textarea

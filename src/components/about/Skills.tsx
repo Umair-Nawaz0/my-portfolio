@@ -9,7 +9,7 @@ export default function Skills() {
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
             Skills &amp; Technologies.
           </h2>
-          <p className="mt-3 text-zinc-400">
+          <p className="mt-3 text-zinc-600 dark:text-zinc-400">
             A structured breakdown of core languages, AI frameworks, backend services, and DevOps tools.
           </p>
         </div>
@@ -21,14 +21,14 @@ export default function Skills() {
               className="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all hover:border-violet-400/30"
             >
               <div>
-                <h3 className="text-base font-semibold text-zinc-100">
+                <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
                   {group.title}
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-2">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-lg border border-white/10 bg-white/[0.02] px-2.5 py-1 text-xs text-zinc-300"
+                      className="rounded-lg border border-zinc-200 bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/[0.02] dark:text-zinc-300"
                     >
                       {skill}
                     </span>

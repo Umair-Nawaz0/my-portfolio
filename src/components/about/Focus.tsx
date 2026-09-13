@@ -31,11 +31,11 @@ export default function Focus() {
               className="glass-card rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 hover:border-violet-400/30"
               key={item.title}
             >
-              <span className="text-xs font-semibold tracking-[0.2em] text-violet-300">
+              <span className="text-xs font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-300">
                 0{index + 1}
               </span>
-              <h3 className="mt-6 text-lg font-medium text-zinc-100">{item.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-zinc-400">{item.text}</p>
+              <h3 className="mt-6 text-lg font-semibold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{item.text}</p>
             </article>
           ))}
         </div>

@@ -52,7 +52,7 @@ export default function Engineering() {
               Beyond the model.
             </h2>
 
-            <p className="mt-5 leading-7 text-zinc-500">
+            <p className="mt-5 leading-7 text-zinc-600 dark:text-zinc-500">
               Building useful AI products requires more than prompting a
               model. I focus on the engineering around the intelligence.
             </p>
@@ -67,11 +67,11 @@ export default function Engineering() {
                   key={item.title}
                   className="glass-card rounded-2xl p-6 transition-transform duration-300 hover:-translate-y-1"
                 >
-                  <Icon size={19} className="text-violet-400" />
+                  <Icon size={19} className="text-violet-600 dark:text-violet-400" />
 
-                  <h3 className="mt-5 font-medium">{item.title}</h3>
+                  <h3 className="mt-5 font-semibold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
 
-                  <p className="mt-2 text-sm leading-6 text-zinc-500">
+                  <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
                     {item.text}
                   </p>
                 </div>

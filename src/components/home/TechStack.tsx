@@ -2,7 +2,7 @@ import { skillGroups } from "@/data/skills";
 
 export default function TechStack() {
   return (
-    <section className="border-y border-white/10 bg-white/[0.015] py-24">
+    <section className="border-y border-zinc-200 bg-zinc-50/50 py-24 dark:border-white/10 dark:bg-white/[0.015]">
       <div className="container">
         <div className="max-w-2xl">
           <p className="section-label">Technical Stack</p>
@@ -12,7 +12,7 @@ export default function TechStack() {
             <span className="text-zinc-500"> &amp; Frameworks.</span>
           </h2>
 
-          <p className="mt-4 text-zinc-400">
+          <p className="mt-4 text-zinc-600 dark:text-zinc-400">
             Selected languages, AI frameworks, databases, and deployment tooling
             utilized across systems.
           </p>
@@ -25,14 +25,14 @@ export default function TechStack() {
               className="glass-card flex flex-col justify-between rounded-2xl p-6 transition-all duration-300 hover:border-violet-400/30"
             >
               <div>
-                <h3 className="text-base font-semibold text-zinc-200">
+                <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-200">
                   {group.title}
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-lg border border-white/10 bg-white/[0.02] px-2.5 py-1 text-xs text-zinc-400"
+                      className="rounded-lg border border-zinc-200 bg-zinc-100 px-2.5 py-1 text-xs font-medium text-zinc-700 dark:border-white/10 dark:bg-white/[0.02] dark:text-zinc-400"
                     >
                       {skill}
                     </span>

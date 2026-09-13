@@ -20,18 +20,18 @@ export default function Education() {
             >
               <div>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold tracking-[0.2em] text-violet-300">
+                  <span className="text-xs font-semibold tracking-[0.2em] text-violet-600 dark:text-violet-300">
                     0{index + 1}
                   </span>
                   <span className="text-xs text-zinc-500">{item.period}</span>
                 </div>
 
-                <h3 className="mt-6 text-xl font-semibold text-zinc-100">{item.stage}</h3>
-                <p className="mt-1 text-sm font-medium text-violet-400">{item.institution}</p>
-                <p className="mt-3 text-xs leading-5 text-zinc-400">{item.focus}</p>
+                <h3 className="mt-6 text-xl font-semibold text-zinc-900 dark:text-zinc-100">{item.stage}</h3>
+                <p className="mt-1 text-sm font-medium text-violet-600 dark:text-violet-400">{item.institution}</p>
+                <p className="mt-3 text-xs leading-5 text-zinc-600 dark:text-zinc-400">{item.focus}</p>
 
                 {item.coursework && (
-                  <div className="mt-5 border-t border-white/10 pt-4">
+                  <div className="mt-5 border-t border-zinc-200 pt-4 dark:border-white/10">
                     <p className="text-[11px] font-semibold uppercase tracking-wider text-zinc-500">
                       Key Coursework
                     </p>
@@ -39,7 +39,7 @@ export default function Education() {
                       {item.coursework.map((course) => (
                         <span
                           key={course}
-                          className="rounded border border-white/5 bg-white/[0.02] px-2 py-0.5 text-[11px] text-zinc-400"
+                          className="rounded border border-zinc-200 bg-zinc-100 px-2 py-0.5 text-[11px] font-medium text-zinc-700 dark:border-white/10 dark:bg-white/[0.02] dark:text-zinc-300"
                         >
                           {course}
                         </span>
@@ -49,9 +49,9 @@ export default function Education() {
                 )}
               </div>
 
-              <div className="mt-6 border-t border-white/10 pt-4">
+              <div className="mt-6 border-t border-zinc-200 pt-4 dark:border-white/10">
                 <span className="text-xs text-zinc-500">Result: </span>
-                <span className="text-xs font-semibold text-zinc-200">{item.result}</span>
+                <span className="text-xs font-semibold text-zinc-800 dark:text-zinc-200">{item.result}</span>
               </div>
             </article>
           ))}

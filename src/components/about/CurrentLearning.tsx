@@ -30,8 +30,8 @@ export default function CurrentLearning() {
               <p className="section-label">Strategy &amp; Chess</p>
               <div className="mt-4 flex flex-wrap items-end justify-between gap-4">
                 <div>
-                  <h3 className="text-2xl font-semibold">Rapid · 1200+ Rating</h3>
-                  <p className="mt-1 text-sm text-zinc-400">Chess.com · @umair-nawaz</p>
+                  <h3 className="text-2xl font-semibold text-zinc-900 dark:text-zinc-100">Rapid · 1200+ Rating</h3>
+                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">Chess.com · @umair-nawaz</p>
                 </div>
                 <a
                   href={chessProfile}
@@ -58,12 +58,12 @@ export default function CurrentLearning() {
             <div className="p-7 sm:p-8">
               <p className="section-label">Geographic Roots</p>
               <div className="mt-4 flex items-start gap-3">
-                <MapPin size={20} className="mt-1 shrink-0 text-violet-300" />
+                <MapPin size={20} className="mt-1 shrink-0 text-violet-600 dark:text-violet-300" />
                 <div>
-                  <h3 className="text-xl font-medium leading-7 text-zinc-100">
+                  <h3 className="text-xl font-semibold leading-7 text-zinc-900 dark:text-zinc-100">
                     Derawar Fort, Cholistan Desert
                   </h3>
-                  <p className="mt-1 text-sm text-zinc-400">{profile.location}</p>
+                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{profile.location}</p>
                 </div>
               </div>
             </div>

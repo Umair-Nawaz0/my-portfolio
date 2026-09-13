@@ -18,7 +18,7 @@ export default function AboutPage() {
             AI Systems &amp; Machine Learning{" "}
             <span className="text-gradient">Engineer.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             A comprehensive overview of architectural specializations, technical foundations,
             core skill competencies, and engineering milestones.
           </p>

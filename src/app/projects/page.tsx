@@ -12,7 +12,7 @@ export default function ProjectsPage() {
           AI systems, architectures &amp;{" "}
           <span className="text-gradient">deployable applications.</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+        <p className="mt-6 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
           A collection of autonomous agent workflows, enterprise RAG pipelines,
           API microservices, and practical automation systems.
         </p>
