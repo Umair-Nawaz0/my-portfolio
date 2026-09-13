@@ -1,21 +1,21 @@
 const journey = [
   {
     stage: "Phase 01",
-    title: "Systems & CS Foundations",
+    title: "Computer Science & OOP Foundations",
     detail:
-      "Core training in C++, object-oriented design, algorithmic complexity, tree/graph structures, and operating systems at FAST NUCES.",
+      "Rigorous foundations in C++, Object-Oriented Programming (inheritance, polymorphism, encapsulation), Data Structures, and relational SQL at FAST-NUCES.",
   },
   {
     stage: "Phase 02",
-    title: "Applied Machine Learning & NLP",
+    title: "Applied Machine Learning & Data",
     detail:
-      "Exploration of neural architectures, transformer attention mechanisms, dense text embeddings, and similarity metrics.",
+      "Data preprocessing, cleaning, visualization, feature scaling (SMOTE), and model training & evaluation using Scikit-Learn algorithms (SVM, Decision Trees, Regression).",
   },
   {
     stage: "Phase 03",
-    title: "AI Systems & Production Engineering",
+    title: "AI Agents & Full-Stack Systems",
     detail:
-      "Building stateful agent loops, enterprise RAG pipelines, schema-validated APIs with FastAPI, and deployable Docker architectures.",
+      "Developing autonomous AI agents, Retrieval-Augmented Generation (RAG), FastAPI & Node.js/Express backends, and containerized Docker deployments.",
   },
 ];
 
@@ -45,4 +45,3 @@ export default function Journey() {
     </section>
   );
 }
-

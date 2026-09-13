@@ -16,7 +16,7 @@ const engineeringAreas = [
   {
     icon: Database,
     title: "RAG & Knowledge",
-    text: "Retrieval pipelines, embeddings, vector search, chunking, and grounded generation.",
+    text: "Retrieval-Augmented Generation (RAG), LLM integration, prompt engineering, and context retrieval.",
   },
   {
     icon: Workflow,

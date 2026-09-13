@@ -1,19 +1,19 @@
 const directions = [
   {
-    title: "Autonomous Agent Architectures",
-    text: "Multi-step tool-calling loops, dynamic DAG planning, structured memory persistence, and human-in-the-loop verification.",
+    title: "Autonomous AI Agents & Workflows",
+    text: "Building goal-driven conversational agents, multi-step tool execution, and workflow orchestration using LangChain, LangGraph, and n8n.",
   },
   {
-    title: "Production RAG Pipelines",
-    text: "Hybrid dense & lexical search, cross-encoder reranking, contextual chunking, and deterministic citation grounding.",
+    title: "Generative AI & RAG",
+    text: "Retrieval-Augmented Generation (RAG) architectures, Large Language Model (LLM) integration, prompt engineering, and conversational memory.",
   },
   {
-    title: "Backend Microservices & APIs",
-    text: "FastAPI services, asynchronous task queues (Redis/Celery), Pydantic v2 schema enforcement, and Dockerized deployments.",
+    title: "Backend & API Development",
+    text: "Production-grade RESTful APIs using FastAPI and Node.js/Express with PostgreSQL, MySQL/AWS RDS, and Docker containerization.",
   },
   {
-    title: "Core Computational Foundations",
-    text: "Algorithmic complexity analysis, data structure design, and object-oriented systems engineering in modern C++.",
+    title: "Machine Learning & C++ OOP",
+    text: "Supervised and unsupervised ML workflows using Scikit-Learn (SVM, SMOTE, Decision Trees) and robust Object-Oriented software engineering in C++.",
   },
 ];
 
@@ -43,4 +43,3 @@ export default function Focus() {
     </section>
   );
 }
-
