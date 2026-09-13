@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Sardar Umair Nawaz Khan — AI Engineer",
+  title: "Sardar Umair Nawaz Khan — AI Systems & Machine Learning Engineer",
   description:
-    "AI Engineer building AI agents, RAG systems, LLM applications, and intelligent automation solutions.",
+    "Portfolio of Sardar Umair Nawaz Khan — AI Systems & Machine Learning Engineer specializing in autonomous agents, workflow automation, and predictive modeling.",
 };
 
 export default function RootLayout({

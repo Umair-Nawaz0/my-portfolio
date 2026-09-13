@@ -8,20 +8,20 @@ export default function ExperiencePreview() {
         <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-violet-500/[0.08] via-transparent to-blue-500/[0.05] p-8 sm:p-12">
           <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <p className="section-label">Experience &amp; Background</p>
+              <p className="section-label">Engineering Journey</p>
 
               <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-tight sm:text-4xl">
-                Engineering, freelance development, and academic foundations.
+                Open-source systems, practical implementations, and academic foundations.
               </h2>
 
               <p className="mt-5 max-w-2xl leading-7 text-zinc-400">
-                A track record of shipping production workflows, client web applications,
-                and technical research in artificial intelligence.
+                A genuine track record of building production-grade autonomous agents, containerized workflow automations,
+                and mathematically grounded machine learning models.
               </p>
             </div>
 
             <Link href="/experience" className="secondary-button">
-              View full timeline
+              Explore journey
               <ArrowRight size={16} />
             </Link>
           </div>

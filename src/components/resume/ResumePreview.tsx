@@ -1,4 +1,4 @@
-import { Mail, MapPin, GraduationCap, Code, Briefcase } from "lucide-react";
+import { Mail, MapPin, GraduationCap, Code, FolderGit2 } from "lucide-react";
 
 import { profile } from "@/data/profile";
 import { experience } from "@/data/experience";
@@ -16,10 +16,10 @@ export default function ResumePreview() {
               {profile.fullName}
             </h2>
             <p className="mt-1 text-base font-medium text-violet-400">
-              AI Systems &amp; Machine Learning Engineer
+              {profile.role}
             </p>
           </div>
-          <div className="flex flex-wrap gap-3 text-xs text-zinc-400 sm:flex-col sm:items-end sm:text-right">
+          <div className="flex flex-col gap-2 text-xs text-zinc-400 sm:items-end sm:text-right">
             <span className="flex items-center gap-1.5">
               <Mail size={13} className="text-violet-400" />
               {profile.email}
@@ -36,7 +36,7 @@ export default function ResumePreview() {
       <div className="mt-6 border-b border-white/10 pb-6">
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-300">
           <GraduationCap size={15} />
-          Education
+          Academic Education
         </div>
         <div className="mt-3 space-y-4">
           {education.map((edu) => (
@@ -55,7 +55,7 @@ export default function ResumePreview() {
       <div className="mt-6 border-b border-white/10 pb-6">
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-300">
           <Code size={15} />
-          Technical Skills
+          Technical Skill Competencies
         </div>
         <div className="mt-3 grid gap-3 sm:grid-cols-2">
           {skillGroups.map((group) => (
@@ -67,11 +67,11 @@ export default function ResumePreview() {
         </div>
       </div>
 
-      {/* Experience */}
+      {/* Open-Source Engineering & Project Milestones */}
       <div className="mt-6">
         <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-300">
-          <Briefcase size={15} />
-          Experience &amp; Technical Roles
+          <FolderGit2 size={15} />
+          Technical Milestones &amp; Project Implementations
         </div>
         <div className="mt-4 space-y-5">
           {experience.map((item) => (
@@ -82,7 +82,7 @@ export default function ResumePreview() {
               </div>
               <p className="mt-1 text-xs text-zinc-400">{item.detail}</p>
               <ul className="mt-2 space-y-1 text-xs text-zinc-400">
-                {item.responsibilities.slice(0, 3).map((r, i) => (
+                {item.responsibilities.map((r, i) => (
                   <li key={i}>• {r}</li>
                 ))}
               </ul>

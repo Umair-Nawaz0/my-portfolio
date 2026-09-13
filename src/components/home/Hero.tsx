@@ -78,7 +78,7 @@ export default function Hero() {
             <div className="relative mx-auto aspect-[4/5] max-w-[420px] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900/70 shadow-2xl shadow-violet-950/20">
               <Image
                 src="/images/profile/profile.png"
-                alt="Sardar Umair Nawaz Khan — AI Engineer"
+                alt="Sardar Umair Nawaz Khan — AI Systems & Machine Learning Engineer"
                 fill
                 priority
                 sizes="(max-width: 1024px) 80vw, 420px"

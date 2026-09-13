@@ -1,16 +1,18 @@
 import { experience } from "@/data/experience";
 import { MapPin } from "lucide-react";
 
-
 export default function WorkExperience() {
   return (
     <section className="py-12">
       <div className="container">
         <div className="max-w-2xl">
-          <p className="section-label">Timeline</p>
+          <p className="section-label">Engineering Journey</p>
           <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-            Work Experience &amp; Roles.
+            Technical Milestones &amp; Foundations.
           </h2>
+          <p className="mt-3 text-sm text-zinc-400">
+            A transparent record of hands-on open-source systems development and formal computer science education.
+          </p>
         </div>
 
         <div className="mt-10 space-y-6">
@@ -19,13 +21,13 @@ export default function WorkExperience() {
               key={item.title + item.company}
               className="glass-card rounded-2xl p-6 transition-all duration-300 hover:border-violet-400/30 sm:p-8"
             >
-              <div className="grid gap-6 md:grid-cols-[160px_1fr] md:items-start">
+              <div className="grid gap-6 md:grid-cols-[180px_1fr] md:items-start">
                 <div>
                   <span className="inline-block rounded-full border border-violet-400/20 bg-violet-400/10 px-3 py-1 text-xs font-medium text-violet-300">
                     {item.period}
                   </span>
-                  <div className="mt-3 flex items-center gap-1.5 text-xs text-zinc-500">
-                    <MapPin size={13} className="shrink-0" />
+                  <div className="mt-3 flex items-start gap-1.5 text-xs text-zinc-500">
+                    <MapPin size={13} className="shrink-0 mt-0.5 text-violet-400" />
                     <span>{item.location}</span>
                   </div>
                 </div>
@@ -71,4 +73,3 @@ export default function WorkExperience() {
     </section>
   );
 }
-
