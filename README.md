@@ -1,12 +1,15 @@
 # Sardar Umair — AI Systems & Machine Learning Engineering Portfolio
 
 [![Next.js](https://img.shields.io/badge/Next.js-16-black.svg?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-sardar--umair--nawaz--khan.vercel.app-brightgreen.svg)](https://sardar-umair-nawaz-khan.vercel.app)
 [![React](https://img.shields.io/badge/React-19-61DAFB.svg?logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0%2B-3178C6.svg?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-v4-38B2AC.svg?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Personal engineering portfolio showcasing production-grade **AI Agents**, **Workflow Automation**, **Machine Learning Systems**, and **C++ Architecture**. Built with modern web standards, server-side rendering, and static site generation via Next.js and TypeScript.
+
+🔗 **Live Deployment:** [https://sardar-umair-nawaz-khan.vercel.app](https://sardar-umair-nawaz-khan.vercel.app)
 
 ---
 
@@ -16,6 +19,7 @@ Personal engineering portfolio showcasing production-grade **AI Agents**, **Work
 | :--- | :--- | :--- | :--- |
 | **AI Appointment Assistant** | AI Agents | FastAPI, React 18, TypeScript, PostgreSQL, asyncpg | [appointment-assistant](https://github.com/Umair-Nawaz0/appointment-assistant) |
 | **AI Meeting Scheduler** | Automation | n8n, Docker Compose, Zoom OAuth, Google Calendar, Gmail | [meeting-scheduler](https://github.com/Umair-Nawaz0/meeting-scheduler) |
+| **Hostel Management ERP** | Full-Stack ERP | Node.js, Express.js, MySQL, AWS RDS, MVC | [hostel_project](https://github.com/Umair-Nawaz0/hostel_project) |
 | **Credit Card Fraud Detection** | Machine Learning | Python, Scikit-Learn, SMOTE, LinearSVC | [svm-credit-card-fraud-detection](https://github.com/Umair-Nawaz0/svm-credit-card-fraud-detection) |
 | **Loan Default Risk Prediction** | Machine Learning | Python, Scikit-Learn, Decision Trees, GridSearchCV | [decision-tree-loan-default-risk-prediction](https://github.com/Umair-Nawaz0/decision-tree-loan-default-risk-prediction) |
 | **Heart Disease Diagnosis** | Machine Learning | Python, Scikit-Learn, Decision Trees, StandardScaler | [decision-tree-heart-disease-prediction](https://github.com/Umair-Nawaz0/decision-tree-heart-disease-prediction) |
