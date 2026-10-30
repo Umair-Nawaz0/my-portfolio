@@ -1,11 +1,11 @@
-import { BriefcaseBusiness, Mail, MapPin, ArrowUpRight } from "lucide-react";
+import { BriefcaseBusiness, Mail, MapPin, ArrowUpRight, Clock, CheckCircle } from "lucide-react";
 import { profile } from "@/data/profile";
 import { GithubIcon } from "@/components/ui/icons";
 
 const links = [
   {
     icon: Mail,
-    label: "Direct Email",
+    label: "Email",
     value: profile.email,
     href: `mailto:${profile.email}`,
   },
@@ -23,28 +23,27 @@ const links = [
   },
   {
     icon: MapPin,
-    label: "Exact Location",
+    label: "Location",
     value: profile.location,
-    href: profile.mapsUrl,
+    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(profile.location)}`,
   },
 ];
 
 export default function ContactInfo() {
   return (
     <div>
-      <p className="section-label">Communication Channels</p>
+      <p className="section-label">Communication &amp; Opportunities</p>
       <h1 className="mt-4 text-4xl font-semibold tracking-[-0.04em] sm:text-5xl md:text-6xl">
         Get in touch.
       </h1>
-      <p className="mt-6 max-w-xl text-base leading-7 text-zinc-400">
-        Reach out to Sardar Umair Nawaz Khan for technical inquiries, software engineering roles,
-        agentic AI implementations, or systems collaborations.
+      <p className="mt-6 max-w-xl text-base leading-7 text-zinc-600 dark:text-zinc-400">
+        Interested in collaborating, hiring for AI/backend engineering roles, or discussing agentic architectures? Reach out directly through any of the channels below.
       </p>
 
       <div className="mt-10 space-y-3">
         {links.map(({ icon: Icon, label, value, href }) => (
           <a
-            className="glass-card flex items-center justify-between gap-4 rounded-2xl p-4 transition hover:border-violet-400/30"
+            className="glass-card flex items-center justify-between gap-4 rounded-2xl p-4 transition hover:border-violet-400/30 hover:bg-violet-500/[0.02]"
             href={href}
             target={href.startsWith("http") ? "_blank" : undefined}
             rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -66,34 +65,17 @@ export default function ContactInfo() {
         ))}
       </div>
 
-      {/* Interactive Google Maps Card */}
-      <div className="glass-card mt-8 overflow-hidden rounded-2xl border border-zinc-200 shadow-xl dark:border-white/10">
-        <div className="flex items-center justify-between border-b border-zinc-200 px-4 py-3 dark:border-white/10">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-300">
-            <MapPin size={14} />
-            Interactive Google Map
-          </div>
-          <a
-            href={profile.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-white"
-          >
-            Open in Google Maps <ArrowUpRight size={13} />
-          </a>
+      <div className="glass-card mt-8 rounded-2xl border border-zinc-200 p-6 dark:border-white/10">
+        <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-violet-600 dark:text-violet-300">
+          <Clock size={15} />
+          Availability &amp; Work Status
         </div>
-        <div className="relative aspect-[16/9] w-full min-h-[220px]">
-          <iframe
-            src={profile.mapsEmbedUrl}
-            width="100%"
-            height="100%"
-            style={{ border: 0 }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="Google Maps Location of Derawar Fort, Bahawalpur"
-            className="absolute inset-0 h-full w-full opacity-90 transition-opacity hover:opacity-100"
-          />
+        <p className="mt-3 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+          Actively available for software engineering roles, AI agent development, and systems consulting. Typically responds within 24 hours.
+        </p>
+        <div className="mt-4 flex items-center gap-2 text-xs text-emerald-600 dark:text-emerald-400">
+          <CheckCircle size={14} />
+          <span>Open to remote &amp; on-site opportunities</span>
         </div>
       </div>
     </div>

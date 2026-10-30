@@ -3,7 +3,6 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
 import WhatIBuild from "@/components/home/WhatIBuild";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
-import Engineering from "@/components/home/Engineering";
 import TechStack from "@/components/home/TechStack";
 import CTA from "@/components/home/CTA";
 
@@ -16,7 +15,6 @@ export default function Home() {
         <Hero />
         <WhatIBuild />
         <FeaturedProjects />
-        <Engineering />
         <TechStack />
         <CTA />
       </main>
