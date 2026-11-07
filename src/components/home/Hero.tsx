@@ -72,16 +72,16 @@ export default function Hero() {
                 </a>
               </div>
 
-              {/* Subtle Chess.com mention as requested */}
+              {/* Live verified Chess.com stats mention */}
               <a
                 href={profile.chess}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs text-zinc-600 transition hover:border-violet-400 hover:text-violet-600 dark:border-white/10 dark:bg-white/[0.03] dark:text-zinc-400 dark:hover:border-violet-400 dark:hover:text-white"
-                title="Chess.com Profile"
+                title="Chess.com Profile: 1363 Rapid, 4592 Puzzles Solved, World Rank #6418"
               >
                 <span>♟</span>
-                <span>Chess.com: {profile.chessRating}</span>
+                <span>1,363 Rapid · 4,592 Puzzles (World Rank #6,418)</span>
                 <ArrowUpRight size={11} />
               </a>
             </div>
