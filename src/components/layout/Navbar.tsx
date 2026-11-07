@@ -13,15 +13,15 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <nav className="container pt-4">
-        <div className="theme-nav flex items-center justify-between rounded-full border border-white/10 bg-black/60 px-4 py-2 backdrop-blur-xl">
+        <div className="theme-nav flex items-center justify-between rounded-full border border-white/10 bg-[#0B0B0C]/80 px-4 py-2 backdrop-blur-xl">
           <Link
             href="#top"
-            className="flex items-center gap-2.5 px-2 py-1 transition-opacity hover:opacity-80"
+            className="flex items-center gap-2.5 px-2 py-1 transition-opacity hover:opacity-85"
           >
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-violet-600 text-xs font-bold text-white dark:bg-white dark:text-black">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#C6F432] text-xs font-black text-[#0B0B0C]">
               U
             </span>
-            <span className="text-sm font-semibold tracking-tight text-zinc-900 dark:text-white">
+            <span className="text-sm font-bold tracking-tight text-zinc-900 dark:text-[#FFFFFF]">
               {profile.displayName}
             </span>
           </Link>
@@ -31,13 +31,13 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="rounded-full px-3.5 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-black/5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
+                className="rounded-full px-3.5 py-1.5 text-sm font-medium text-zinc-400 transition-colors hover:text-[#C6F432]"
               >
                 {item.name}
               </a>
             ))}
 
-            <div className="ml-2 pl-2 border-l border-zinc-200 dark:border-white/10">
+            <div className="ml-2 pl-2 border-l border-white/10">
               <ThemeToggle />
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Navbar() {
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
-              className="rounded-full p-2 text-zinc-700 hover:bg-black/5 dark:text-zinc-300 dark:hover:bg-white/5"
+              className="rounded-full p-2 text-zinc-400 hover:text-white"
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
             >
@@ -57,14 +57,14 @@ export default function Navbar() {
         </div>
 
         {open && (
-          <div className="mt-2 rounded-2xl border border-zinc-200 bg-white/95 p-4 shadow-xl backdrop-blur-xl dark:border-white/10 dark:bg-zinc-950/95 md:hidden">
+          <div className="mt-2 rounded-2xl border border-white/10 bg-[#0B0B0C]/95 p-4 shadow-2xl backdrop-blur-xl md:hidden">
             <div className="flex flex-col gap-1">
               {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-2 text-sm font-medium text-zinc-700 transition hover:bg-black/5 dark:text-zinc-300 dark:hover:bg-white/5"
+                  className="rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-300 transition hover:bg-white/5 hover:text-[#C6F432]"
                 >
                   {item.name}
                 </a>

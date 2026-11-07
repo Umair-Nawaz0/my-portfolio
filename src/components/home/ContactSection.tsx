@@ -4,12 +4,12 @@ import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="border-t border-zinc-200 py-20 dark:border-white/10">
+    <section id="contact" className="border-t border-white/10 py-20">
       <div className="container">
-        <div className="glass-card rounded-2xl p-8 sm:p-10">
+        <div className="glass-card rounded-2xl p-8 sm:p-10 transition hover:border-[#C6F432]/40">
           <div className="max-w-xl">
             <p className="section-label">Contact</p>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-white">
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-[#FFFFFF]">
               Get in Touch
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
@@ -48,8 +48,8 @@ export default function ContactSection() {
               </a>
             </div>
 
-            <div className="mt-8 flex items-center gap-2 border-t border-zinc-100 pt-5 text-xs text-zinc-500 dark:border-white/5 dark:text-zinc-400">
-              <MapPin size={13} className="text-violet-500" />
+            <div className="mt-8 flex items-center gap-2 border-t border-white/10 pt-5 text-xs text-zinc-400">
+              <MapPin size={13} className="text-[#C6F432]" />
               <span>{profile.location} · Remote Available</span>
             </div>
           </div>

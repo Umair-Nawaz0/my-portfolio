@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight, Trophy, Zap } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 type ChessStats = {
   rapidRating: number;
@@ -9,9 +9,6 @@ type ChessStats = {
   puzzlesSolved: number;
   puzzleRating: number;
   puzzlePeak: number;
-  globalRank: string;
-  percentile: number;
-  totalPlayers: string;
   profileUrl: string;
 };
 
@@ -21,9 +18,6 @@ const defaultStats: ChessStats = {
   puzzlesSolved: 4592,
   puzzleRating: 3581,
   puzzlePeak: 3599,
-  globalRank: "#6,418",
-  percentile: 99.9,
-  totalPlayers: "62.9M+",
   profileUrl: "https://www.chess.com/member/umair-nawaz",
 };
 
@@ -41,20 +35,28 @@ export default function ChessLiveCard() {
         }
       })
       .catch(() => {
-        // Keeps fallback stats safely
+        // Keeps fallback data smoothly
       });
   }, []);
 
   return (
-    <div className="glass-card rounded-2xl p-4 sm:p-5 transition-all hover:border-violet-500/40">
-      <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <span className="text-base">♟</span>
-          <span className="text-xs font-semibold uppercase tracking-wider text-zinc-900 dark:text-zinc-200">
-            Chess.com Global Standing
+    <div className="glass-card rounded-2xl p-6 sm:p-8 transition-all hover:border-[#C6F432]/50">
+      {/* Header */}
+      <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-white/10">
+        <div className="flex items-center gap-2.5">
+          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#C6F432]/10 text-base text-[#C6F432]">
+            ♟
           </span>
-          <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10px] font-medium text-emerald-600 dark:bg-emerald-400/10 dark:text-emerald-400">
-            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          <div>
+            <h3 className="text-sm font-bold tracking-tight text-zinc-900 dark:text-[#FFFFFF]">
+              Chess.com Official Stats
+            </h3>
+            <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
+              Verified account · @umair-nawaz
+            </p>
+          </div>
+          <span className="ml-2 inline-flex items-center gap-1.5 rounded-full bg-[#C6F432]/15 px-2.5 py-0.5 text-[10px] font-semibold text-[#C6F432]">
+            <span className="h-1.5 w-1.5 rounded-full bg-[#C6F432] animate-pulse" />
             {isLive ? "Live Sync" : "Verified"}
           </span>
         </div>
@@ -63,46 +65,97 @@ export default function ChessLiveCard() {
           href={stats.profileUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-xs text-zinc-500 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white"
-          title="View profile on Chess.com"
+          className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 transition hover:border-[#C6F432] hover:text-[#C6F432]"
+          title="Open Chess.com Profile"
         >
-          <span>@umair-nawaz</span>
-          <ArrowUpRight size={12} />
+          <span>View Chess.com</span>
+          <ArrowUpRight size={13} />
         </a>
       </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-4 border-t border-zinc-100 pt-3 dark:border-white/5">
-        <div className="rounded-xl border border-zinc-200 bg-zinc-50/70 p-2.5 dark:border-white/10 dark:bg-white/[0.02]">
-          <div className="flex items-center gap-1 text-[11px] text-zinc-500 dark:text-zinc-400">
-            <Zap size={12} className="text-amber-500" />
-            <span>Rapid Rating</span>
+      {/* Prominent 2-Column Stats Grid */}
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+        {/* Card 1: Rapid Rating with Chess Illustration */}
+        <div className="relative overflow-hidden rounded-xl border border-white/10 bg-[#161618] p-5 sm:p-6 transition hover:border-[#C6F432]/40">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#C6F432]">
+                Rapid Chess Rating
+              </p>
+              <p className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                {stats.rapidRating.toLocaleString()}
+              </p>
+              <div className="mt-3 flex items-center gap-2 text-xs text-zinc-400">
+                <span className="rounded bg-white/5 px-2 py-0.5 text-zinc-300 font-medium">
+                  Peak: {stats.rapidPeak}
+                </span>
+                <span>·</span>
+                <span>1,615+ Wins</span>
+              </div>
+            </div>
+
+            {/* Chess Piece Illustration */}
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#C6F432]/20 bg-[#C6F432]/10 text-[#C6F432]">
+              <svg
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-label="Chess Knight"
+              >
+                <path d="M19 20H5v-2c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v2z" fill="#C6F432" fillOpacity="0.2" />
+                <path d="M16 16c0-3-1-4-2-5 1-1 1-3 0-4-1-1-3-1-4 0l-1 1c-1-1-3-1-4 0-1 1-1 3 0 4-1 1-2 2-2 5" />
+                <path d="M12 4v4" />
+                <circle cx="10" cy="9" r="1" fill="currentColor" />
+              </svg>
+            </div>
           </div>
-          <p className="mt-1 text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
-            {stats.rapidRating.toLocaleString()}
-          </p>
-          <p className="text-[10px] text-zinc-400">Peak: {stats.rapidPeak}</p>
         </div>
 
-        <div className="rounded-xl border border-zinc-200 bg-zinc-50/70 p-2.5 dark:border-white/10 dark:bg-white/[0.02]">
-          <div className="flex items-center gap-1 text-[11px] text-zinc-500 dark:text-zinc-400">
-            <Trophy size={12} className="text-violet-500" />
-            <span>Puzzles Solved</span>
-          </div>
-          <p className="mt-1 text-base sm:text-lg font-bold text-zinc-900 dark:text-white">
-            {stats.puzzlesSolved.toLocaleString()}
-          </p>
-          <p className="text-[10px] text-zinc-400">Rating: {stats.puzzleRating}</p>
-        </div>
+        {/* Card 2: Puzzles Solved with Puzzle Illustration */}
+        <div className="relative overflow-hidden rounded-xl border border-white/10 bg-[#161618] p-5 sm:p-6 transition hover:border-[#C6F432]/40">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#C6F432]">
+                Puzzles Solved
+              </p>
+              <p className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
+                {stats.puzzlesSolved.toLocaleString()}
+              </p>
+              <div className="mt-3 flex items-center gap-2 text-xs text-zinc-400">
+                <span className="rounded bg-white/5 px-2 py-0.5 text-zinc-300 font-medium">
+                  Rating: {stats.puzzleRating}
+                </span>
+                <span>·</span>
+                <span>Peak: {stats.puzzlePeak}</span>
+              </div>
+            </div>
 
-        <div className="rounded-xl border border-zinc-200 bg-zinc-50/70 p-2.5 dark:border-white/10 dark:bg-white/[0.02]">
-          <div className="flex items-center gap-1 text-[11px] text-zinc-500 dark:text-zinc-400">
-            <span className="text-emerald-500 font-bold text-[10px]">#1</span>
-            <span>World Rank</span>
+            {/* Puzzle Piece Illustration */}
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#C6F432]/20 bg-[#C6F432]/10 text-[#C6F432]">
+              <svg
+                viewBox="0 0 24 24"
+                width="32"
+                height="32"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-label="Puzzle Piece"
+              >
+                <path
+                  d="M19.439 7.85c0-1.571-.802-2.85-1.791-2.85H16V3.85c0-.989-1.279-1.79-2.85-1.79-1.571 0-2.85.801-2.85 1.79V5H8.35c-.989 0-1.79 1.279-1.79 2.85 0 1.571.801 2.85 1.79 2.85H9.5v2.85c0 .989-1.279 1.79-2.85 1.79-1.571 0-2.85-.801-2.85-1.79V12H2.65C1.66 12 .86 13.28.86 14.85c0 1.57.8 2.85 1.79 2.85H5v1.45c0 .99 1.28 1.79 2.85 1.79 1.57 0 2.85-.8 2.85-1.79V19.5h2.85c.99 0 1.79-1.28 1.79-2.85 0-1.57-.8-2.85-1.79-2.85H12v-2.85c0-.99 1.28-1.79 2.85-1.79 1.57 0 2.85.8 2.85 1.79V12h1.45c.99 0 1.79-1.28 1.79-2.85 0-.47-.07-.9-.19-1.3z"
+                  fill="#C6F432"
+                  fillOpacity="0.2"
+                />
+              </svg>
+            </div>
           </div>
-          <p className="mt-1 text-base sm:text-lg font-bold text-emerald-600 dark:text-emerald-400">
-            {stats.globalRank}
-          </p>
-          <p className="text-[10px] text-zinc-400">Top {100 - stats.percentile}% Globally</p>
         </div>
       </div>
     </div>
