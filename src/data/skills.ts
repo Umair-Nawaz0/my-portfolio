@@ -1,54 +1,58 @@
+export type SkillItem = {
+  name: string;
+  link?: string;
+};
+
 export type SkillGroup = {
   title: string;
-  skills: string[];
+  skills: SkillItem[];
 };
 
 export const skillGroups: SkillGroup[] = [
   {
-    title: "Generative AI & Agentic Systems",
+    title: "AI & Machine Learning",
     skills: [
-      "Autonomous AI Agents",
-      "RAG Architecture",
-      "LLM Tool Calling & Function Execution",
-      "LangChain & LangGraph",
-      "n8n Workflow Automation",
-      "Google Gemini & OpenAI APIs",
-      "Prompt Engineering",
+      { name: "PyTorch", link: "https://pytorch.org" },
+      { name: "Scikit-Learn" },
+      { name: "SMOTE Oversampling" },
+      { name: "LinearSVC & Decision Trees" },
+      { name: "PCA Dimensionality Reduction" },
+      { name: "K-Means++ & Hierarchical Clustering" },
+      { name: "Pandas & NumPy" },
     ],
   },
   {
-    title: "Backend & Systems Architecture",
+    title: "Generative AI & Agent Workflows",
     skills: [
-      "FastAPI (Async Python)",
-      "Node.js & Express",
-      "PostgreSQL (asyncpg / SQLAlchemy)",
-      "RESTful API Architecture",
-      "Docker & Docker Compose",
-      "Authentication (JWT / SMTP)",
-      "C++17 (OOP & Systems)",
+      { name: "Autonomous AI Agents" },
+      { name: "Prompt Engineering" },
+      { name: "LLM Tool Calling & Function Execution" },
+      { name: "Google Gemini API & OpenAI" },
+      { name: "n8n Workflow Automation" },
+      { name: "RAG Architecture" },
     ],
   },
   {
-    title: "Machine Learning & Analytics",
+    title: "Backend & Systems",
     skills: [
-      "Scikit-Learn",
-      "SMOTE Imbalanced Oversampling",
-      "Support Vector Machines (LinearSVC)",
-      "PCA Dimensionality Reduction",
-      "K-Means++ & Hierarchical Clustering",
-      "Decision Trees & Cost-Sensitive Learning",
-      "Interactive Plotly Visualizations",
+      { name: "FastAPI (Async Python)" },
+      { name: "Node.js & Express" },
+      { name: "PHP" },
+      { name: "PostgreSQL (asyncpg / SQLAlchemy)" },
+      { name: "MySQL & SQLite" },
+      { name: "Modern C++17 (OOP & Systems)" },
+      { name: "Docker & Docker Compose" },
     ],
   },
   {
     title: "Frontend & Engineering Tools",
     skills: [
-      "Next.js 16 (App Router)",
-      "React 19 & TypeScript",
-      "Tailwind CSS & Vite",
-      "Git & GitHub Workflows",
-      "Postman API Testing",
-      "Linux / Bash Scripting",
+      { name: "Next.js 16 (App Router)" },
+      { name: "React 19 & TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Git & GitHub Workflows" },
+      { name: "Linux / Bash Scripting" },
+      { name: "Postman API Testing" },
     ],
   },
 ];

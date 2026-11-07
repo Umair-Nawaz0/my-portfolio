@@ -31,20 +31,13 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="rounded-full px-4 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-black/5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
+                className="rounded-full px-3.5 py-1.5 text-sm font-medium text-zinc-600 transition-colors hover:bg-black/5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-white/5 dark:hover:text-white"
               >
                 {item.name}
               </a>
             ))}
 
-            <a
-              href={`mailto:${profile.email}`}
-              className="nav-cta ml-3 rounded-full bg-zinc-900 px-4 py-1.5 text-sm font-medium text-white transition-opacity hover:opacity-90 dark:bg-white dark:text-black"
-            >
-              Get in Touch
-            </a>
-
-            <div className="ml-2">
+            <div className="ml-2 pl-2 border-l border-zinc-200 dark:border-white/10">
               <ThemeToggle />
             </div>
           </div>
@@ -71,19 +64,11 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-xl px-4 py-2.5 text-sm font-medium text-zinc-700 transition hover:bg-black/5 dark:text-zinc-300 dark:hover:bg-white/5"
+                  className="rounded-xl px-4 py-2 text-sm font-medium text-zinc-700 transition hover:bg-black/5 dark:text-zinc-300 dark:hover:bg-white/5"
                 >
                   {item.name}
                 </a>
               ))}
-
-              <a
-                href={`mailto:${profile.email}`}
-                onClick={() => setOpen(false)}
-                className="mt-2 rounded-xl bg-violet-600 px-4 py-2.5 text-center text-sm font-medium text-white transition hover:bg-violet-700 dark:bg-white dark:text-black"
-              >
-                Get in Touch
-              </a>
             </div>
           </div>
         )}

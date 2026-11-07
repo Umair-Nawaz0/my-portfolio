@@ -7,4 +7,6 @@ export const profile = {
   email: "sardarumairnawazkhan@gmail.com",
   github: "https://github.com/Umair-Nawaz0",
   linkedin: "https://www.linkedin.com/in/sardar-umair-nawaz-khan/",
+  chess: "https://www.chess.com/member/umair-nawaz",
+  chessRating: "1200+ Rapid",
 };

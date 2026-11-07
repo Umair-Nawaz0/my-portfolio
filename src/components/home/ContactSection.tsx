@@ -4,27 +4,27 @@ import { GithubIcon, LinkedinIcon } from "@/components/ui/icons";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="border-t border-zinc-200 py-24 dark:border-white/10">
+    <section id="contact" className="border-t border-zinc-200 py-20 dark:border-white/10">
       <div className="container">
-        <div className="glass-card relative overflow-hidden rounded-3xl p-8 sm:p-12 lg:p-16">
-          <div className="max-w-2xl">
-            <p className="section-label">Connect &amp; Collaborate</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl md:text-5xl dark:text-white">
-              Let&apos;s build something <span className="text-gradient">exceptional.</span>
+        <div className="glass-card rounded-2xl p-8 sm:p-10">
+          <div className="max-w-xl">
+            <p className="section-label">Contact</p>
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-white">
+              Get in Touch
             </h2>
-            <p className="mt-4 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
-              I am open to AI engineering roles, technical collaborations, and software projects.
-              Reach out directly via email or connect through LinkedIn.
+            <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+              Open to machine learning engineering roles, AI agent development, and technical opportunities.
+              Feel free to reach out directly via email or connect on LinkedIn.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-6 flex flex-wrap items-center gap-3">
               <a
                 href={`mailto:${profile.email}`}
                 className="primary-button"
               >
-                <Mail size={16} />
-                <span>Send Email Directly</span>
-                <ArrowUpRight size={14} />
+                <Mail size={15} />
+                <span>{profile.email}</span>
+                <ArrowUpRight size={13} />
               </a>
 
               <a
@@ -33,7 +33,7 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="secondary-button"
               >
-                <GithubIcon size={16} />
+                <GithubIcon size={15} />
                 <span>GitHub</span>
               </a>
 
@@ -43,25 +43,14 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="secondary-button"
               >
-                <LinkedinIcon size={16} />
+                <LinkedinIcon size={15} />
                 <span>LinkedIn</span>
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center gap-6 border-t border-zinc-200 pt-6 text-xs text-zinc-500 dark:border-white/10 dark:text-zinc-400">
-              <div className="flex items-center gap-2">
-                <MapPin size={14} className="text-violet-500" />
-                <span>{profile.location} (Remote Available)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="font-semibold text-zinc-700 dark:text-zinc-300">Email:</span>
-                <a
-                  href={`mailto:${profile.email}`}
-                  className="hover:underline hover:text-violet-600 dark:hover:text-violet-400"
-                >
-                  {profile.email}
-                </a>
-              </div>
+            <div className="mt-8 flex items-center gap-2 border-t border-zinc-100 pt-5 text-xs text-zinc-500 dark:border-white/5 dark:text-zinc-400">
+              <MapPin size={13} className="text-violet-500" />
+              <span>{profile.location} · Remote Available</span>
             </div>
           </div>
         </div>
