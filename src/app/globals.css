@@ -90,36 +90,6 @@ a {
   background-size: 48px 48px;
 }
 
-.hero-glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 9999px;
-  background:
-    radial-gradient(
-      circle,
-      rgba(139, 92, 246, 0.18) 0%,
-      rgba(59, 130, 246, 0.08) 35%,
-      transparent 70%
-    );
-  filter: blur(30px);
-  pointer-events: none;
-}
-
-.noise {
-  position: relative;
-  background: var(--background);
-}
-
-.noise::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.025;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");
-}
-
 /* --------------------------------
    Text
 -------------------------------- */
@@ -256,10 +226,6 @@ a {
 :root[data-theme="light"] ::selection {
   background: rgba(109, 66, 207, 0.2);
   color: #172033;
-}
-
-:root[data-theme="light"] .noise {
-  background: var(--background) !important;
 }
 
 :root[data-theme="light"] .site-grid {
