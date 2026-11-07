@@ -19,7 +19,7 @@ export default function Hero() {
               Available for Opportunities
             </div>
 
-            <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 sm:text-5xl md:text-6xl dark:text-[#FFFFFF]">
+            <h1 className="text-4xl font-extrabold tracking-tight text-[#FFFFFF] sm:text-5xl md:text-6xl">
               Sardar Umair <br />
               <span className="text-gradient">Nawaz Khan</span>
             </h1>
@@ -28,7 +28,7 @@ export default function Hero() {
               {profile.role} · FAST-NUCES
             </p>
 
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-base">
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-zinc-400 sm:text-base">
               Computer Science undergraduate building production machine learning pipelines,
               cost-sensitive classification models, autonomous agent workflows, and asynchronous backend microservices.
             </p>

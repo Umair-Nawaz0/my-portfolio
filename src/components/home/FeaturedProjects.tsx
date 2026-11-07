@@ -25,10 +25,10 @@ export default function FeaturedProjects() {
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <p className="section-label">Verified Implementations</p>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-[#FFFFFF]">
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#FFFFFF] sm:text-3xl">
               Machine Learning &amp; <span className="text-gradient italic">Systems</span>
             </h2>
-            <p className="mt-2 max-w-xl text-sm text-zinc-600 dark:text-zinc-400">
+            <p className="mt-2 max-w-xl text-sm text-zinc-400">
               Open-source machine learning pipelines, autonomous agents, and systems architectures on GitHub.
             </p>
           </div>
@@ -90,11 +90,11 @@ export default function FeaturedProjects() {
                   </a>
                 </div>
 
-                <h3 className="mt-3 text-base font-bold tracking-tight text-zinc-900 dark:text-[#FFFFFF]">
+                <h3 className="mt-3 text-base font-bold tracking-tight text-[#FFFFFF]">
                   {project.title}
                 </h3>
 
-                <p className="mt-2 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                <p className="mt-2 text-xs leading-relaxed text-zinc-400">
                   {project.summary}
                 </p>
 

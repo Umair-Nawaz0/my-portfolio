@@ -48,7 +48,7 @@ export default function ChessLiveCard() {
             ♟
           </span>
           <div>
-            <h3 className="text-sm font-bold tracking-tight text-zinc-900 dark:text-[#FFFFFF]">
+            <h3 className="text-sm font-bold tracking-tight text-[#FFFFFF]">
               Chess.com Official Stats
             </h3>
             <p className="text-[11px] text-zinc-500 dark:text-zinc-400">

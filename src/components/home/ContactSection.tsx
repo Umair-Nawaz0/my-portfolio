@@ -9,10 +9,10 @@ export default function ContactSection() {
         <div className="glass-card rounded-2xl p-8 sm:p-10 transition hover:border-[#C6F432]/40">
           <div className="max-w-xl">
             <p className="section-label">Contact</p>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-[#FFFFFF]">
+            <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#FFFFFF] sm:text-3xl">
               Get in Touch
             </h2>
-            <p className="mt-3 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+            <p className="mt-3 text-sm leading-relaxed text-zinc-400">
               Open to machine learning engineering roles, AI agent development, and technical opportunities.
               Feel free to reach out directly via email or connect on LinkedIn.
             </p>

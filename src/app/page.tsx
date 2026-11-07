@@ -8,16 +8,22 @@ import ContactSection from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#F7F8FA] transition-colors duration-200 dark:bg-[#0B0B0C] site-grid text-zinc-900 dark:text-[#FFFFFF]">
-      <Navbar />
-      <main>
-        <Hero />
-        <AboutSection />
-        <FeaturedProjects />
-        <TechStack />
-        <ContactSection />
-      </main>
-      <Footer />
+    <div className="relative min-h-screen bg-[#0B0B0C] text-[#FFFFFF] overflow-x-hidden">
+      {/* Ambient Lime Glow from the screenshot */}
+      <div className="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 h-[500px] w-[900px] rounded-full bg-[#C6F432]/[0.08] blur-[140px]" />
+      <div className="pointer-events-none absolute right-0 top-[40%] h-[400px] w-[500px] rounded-full bg-[#C6F432]/[0.04] blur-[150px]" />
+
+      <div className="relative z-10">
+        <Navbar />
+        <main>
+          <Hero />
+          <AboutSection />
+          <FeaturedProjects />
+          <TechStack />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }

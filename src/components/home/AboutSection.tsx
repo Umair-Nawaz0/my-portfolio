@@ -31,11 +31,11 @@ export default function AboutSection() {
       <div className="container">
         <div className="max-w-2xl">
           <p className="section-label">Background &amp; Focus</p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-[#FFFFFF]">
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#FFFFFF] sm:text-3xl">
             Engineering robust intelligence with{" "}
             <span className="text-gradient italic">architectural rigor.</span>
           </h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="mt-2 text-sm text-zinc-400">
             Focused on production software engineering: deterministic state management,
             high-throughput APIs, and verifiable machine learning models.
           </p>
@@ -54,10 +54,10 @@ export default function AboutSection() {
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#C6F432]/10 text-[#C6F432]">
                     <Icon size={18} />
                   </div>
-                  <h3 className="mt-4 text-base font-semibold text-zinc-900 dark:text-[#FFFFFF]">
+                  <h3 className="mt-4 text-base font-semibold text-[#FFFFFF]">
                     {pillar.title}
                   </h3>
-                  <p className="mt-2 text-xs leading-relaxed text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-2 text-xs leading-relaxed text-zinc-400">
                     {pillar.description}
                   </p>
                 </div>
@@ -79,13 +79,13 @@ export default function AboutSection() {
                 <GraduationCap size={22} />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-zinc-900 dark:text-[#FFFFFF]">
+                <h4 className="text-sm font-bold text-[#FFFFFF]">
                   {edu.stage}
                 </h4>
                 <p className="text-xs text-[#C6F432] font-semibold">
                   {edu.institution}
                 </p>
-                <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">
+                <p className="mt-0.5 text-xs text-zinc-400">
                   {edu.focus} ({edu.period})
                 </p>
               </div>

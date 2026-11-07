@@ -13,15 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try { const theme = localStorage.getItem('portfolio-theme'); if (theme === 'light' || theme === 'dark') document.documentElement.dataset.theme = theme; else if (window.matchMedia('(prefers-color-scheme: light)').matches) document.documentElement.dataset.theme = 'light'; } catch (_) {}`,
-          }}
-        />
-      </head>
-      <body>{children}</body>
+    <html lang="en" className="dark">
+      <body className="bg-[#0B0B0C] text-[#FFFFFF] antialiased">
+        {children}
+      </body>
     </html>
   );
 }

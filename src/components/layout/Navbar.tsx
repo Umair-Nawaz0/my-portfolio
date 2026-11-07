@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState } from "react";
 import { navigation } from "@/data/navigation";
 import { profile } from "@/data/profile";
-import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,7 +12,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <nav className="container pt-4">
-        <div className="theme-nav flex items-center justify-between rounded-full border border-white/10 bg-[#0B0B0C]/80 px-4 py-2 backdrop-blur-xl">
+        <div className="flex items-center justify-between rounded-full border border-white/10 bg-[#0B0B0C]/85 px-4 py-2 backdrop-blur-xl">
           <Link
             href="#top"
             className="flex items-center gap-2.5 px-2 py-1 transition-opacity hover:opacity-85"
@@ -21,7 +20,7 @@ export default function Navbar() {
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#C6F432] text-xs font-black text-[#0B0B0C]">
               U
             </span>
-            <span className="text-sm font-bold tracking-tight text-zinc-900 dark:text-[#FFFFFF]">
+            <span className="text-sm font-bold tracking-tight text-[#FFFFFF]">
               {profile.displayName}
             </span>
           </Link>
@@ -31,19 +30,14 @@ export default function Navbar() {
               <a
                 key={item.name}
                 href={item.href}
-                className="rounded-full px-3.5 py-1.5 text-sm font-medium text-zinc-400 transition-colors hover:text-[#C6F432]"
+                className="rounded-full px-4 py-1.5 text-sm font-medium text-zinc-400 transition-colors hover:text-[#C6F432]"
               >
                 {item.name}
               </a>
             ))}
-
-            <div className="ml-2 pl-2 border-l border-white/10">
-              <ThemeToggle />
-            </div>
           </div>
 
           <div className="flex items-center gap-2 md:hidden">
-            <ThemeToggle />
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}

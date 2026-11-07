@@ -7,10 +7,10 @@ export default function TechStack() {
       <div className="container">
         <div className="max-w-2xl">
           <p className="section-label">Technical Stack</p>
-          <h2 className="mt-2 text-2xl font-bold tracking-tight text-zinc-900 sm:text-3xl dark:text-[#FFFFFF]">
+          <h2 className="mt-2 text-2xl font-bold tracking-tight text-[#FFFFFF] sm:text-3xl">
             Core Technologies &amp; <span className="text-gradient italic">Tooling</span>
           </h2>
-          <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+          <p className="mt-2 text-sm text-zinc-400">
             Languages, frameworks, and deployment tooling applied across my systems.
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function TechStack() {
               className="glass-card flex flex-col justify-between rounded-xl p-5 transition-all hover:border-[#C6F432]/30"
             >
               <div>
-                <h3 className="text-xs font-bold uppercase tracking-wider text-zinc-900 dark:text-[#FFFFFF]">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#FFFFFF]">
                   {group.title}
                 </h3>
                 <div className="mt-3 flex flex-wrap gap-1.5">
