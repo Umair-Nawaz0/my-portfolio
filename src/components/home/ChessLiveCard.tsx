@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Award, CheckCircle2, Cpu, ShieldCheck, Zap } from "lucide-react";
 
 type ChessStats = {
   rapidRating: number;
   rapidPeak: number;
   puzzlesSolved: number;
-  puzzleRating: number;
-  puzzlePeak: number;
   profileUrl: string;
 };
 
@@ -16,8 +14,6 @@ const defaultStats: ChessStats = {
   rapidRating: 1363,
   rapidPeak: 1431,
   puzzlesSolved: 4592,
-  puzzleRating: 3581,
-  puzzlePeak: 3599,
   profileUrl: "https://www.chess.com/member/umair-nawaz",
 };
 
@@ -35,29 +31,32 @@ export default function ChessLiveCard() {
         }
       })
       .catch(() => {
-        // Keeps fallback data smoothly
+        // Keeps fallback stats smoothly
       });
   }, []);
 
   return (
-    <div className="glass-card rounded-2xl p-6 sm:p-8 transition-all hover:border-[#C6F432]/50">
-      {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-3 pb-5 border-b border-white/10">
-        <div className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#C6F432]/10 text-base text-[#C6F432]">
+    <div className="glass-card-featured rounded-3xl p-6 sm:p-10 shadow-2xl transition-all duration-300 hover:shadow-indigo-500/10">
+      {/* Header Banner */}
+      <div className="flex flex-wrap items-center justify-between gap-4 pb-8 border-b border-indigo-100/90">
+        <div className="flex items-center gap-3.5">
+          <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-2xl text-white shadow-md shadow-indigo-500/25">
             ♟
           </span>
           <div>
-            <h3 className="text-sm font-bold tracking-tight text-[#FFFFFF]">
-              Chess.com Official Stats
-            </h3>
-            <p className="text-[11px] text-zinc-500 dark:text-zinc-400">
-              Verified account · @umair-nawaz
+            <div className="flex items-center gap-2">
+              <h3 className="text-lg font-black tracking-tight text-slate-900">
+                Official Chess.com Verified Profile
+              </h3>
+              <CheckCircle2 size={16} className="text-blue-600" />
+            </div>
+            <p className="text-xs font-semibold text-slate-500">
+              Handle: <span className="font-bold text-slate-800">@umair-nawaz</span> · Competitive Match History
             </p>
           </div>
-          <span className="ml-2 inline-flex items-center gap-1.5 rounded-full bg-[#C6F432]/15 px-2.5 py-0.5 text-[10px] font-semibold text-[#C6F432]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#C6F432] animate-pulse" />
-            {isLive ? "Live Sync" : "Verified"}
+          <span className="ml-2 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 border border-emerald-200 px-3.5 py-1 text-xs font-bold text-emerald-700 shadow-xs">
+            <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+            {isLive ? "Live API Connected" : "Verified Account"}
           </span>
         </div>
 
@@ -65,96 +64,144 @@ export default function ChessLiveCard() {
           href={stats.profileUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-xs font-medium text-zinc-300 transition hover:border-[#C6F432] hover:text-[#C6F432]"
-          title="Open Chess.com Profile"
+          className="inline-flex items-center gap-2 rounded-full bg-white border border-indigo-200/90 px-5 py-2.5 text-xs font-bold text-indigo-700 shadow-sm transition hover:border-indigo-500 hover:bg-indigo-50/50 hover:shadow-md hover:-translate-y-0.5"
+          title="Open Official Chess.com Profile"
         >
-          <span>View Chess.com</span>
-          <ArrowUpRight size={13} />
+          <span>View Chess.com Profile</span>
+          <ArrowUpRight size={14} />
         </a>
       </div>
 
-      {/* Prominent 2-Column Stats Grid */}
-      <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        {/* Card 1: Rapid Rating with Chess Illustration */}
-        <div className="relative overflow-hidden rounded-xl border border-white/10 bg-[#161618] p-5 sm:p-6 transition hover:border-[#C6F432]/40">
-          <div className="flex items-start justify-between gap-4">
+      {/* Prominent High-Impact 2-Card Showcase */}
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
+        {/* Card 1: Rapid Elo Rating */}
+        <div className="relative overflow-hidden rounded-3xl border border-blue-200/90 bg-gradient-to-br from-white via-blue-50/40 to-indigo-50/50 p-8 shadow-sm transition-all hover:border-blue-400 hover:shadow-xl">
+          {/* Subtle Ambient Background Watermark */}
+          <div className="pointer-events-none absolute -right-6 -bottom-6 text-slate-900/5 select-none font-black text-9xl">
+            ♟
+          </div>
+
+          <div className="relative z-10 flex flex-col justify-between h-full">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#C6F432]">
-                Rapid Chess Rating
-              </p>
-              <p className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-                {stats.rapidRating.toLocaleString()}
-              </p>
-              <div className="mt-3 flex items-center gap-2 text-xs text-zinc-400">
-                <span className="rounded bg-white/5 px-2 py-0.5 text-zinc-300 font-medium">
-                  Peak: {stats.rapidPeak}
+              <div className="flex items-center justify-between gap-4">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100/80 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-blue-800">
+                  <Award size={13} />
+                  Competitive Rapid Elo
                 </span>
-                <span>·</span>
-                <span>1,615+ Wins</span>
+                <span className="rounded-full bg-white px-2.5 py-0.5 text-[11px] font-bold text-blue-700 border border-blue-200 shadow-xs">
+                  Peak: {stats.rapidPeak} Elo
+                </span>
               </div>
+
+              {/* Huge Stat */}
+              <div className="mt-5 flex items-baseline gap-3">
+                <p className="text-5xl sm:text-6xl font-black tracking-tight text-slate-900">
+                  1300+
+                </p>
+                <div className="flex flex-col">
+                  <span className="text-base font-extrabold text-blue-700">Rapid Elo</span>
+                  <span className="text-[11px] font-semibold text-slate-500">10-Minute Blitz/Rapid</span>
+                </div>
+              </div>
+
+              {/* Sub-metrics */}
+              <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+                <span className="rounded-lg bg-white border border-blue-100 px-2.5 py-1 font-bold text-slate-800 shadow-xs">
+                  1,615+ Match Victories
+                </span>
+                <span className="rounded-lg bg-white border border-blue-100 px-2.5 py-1 font-semibold text-slate-600 shadow-xs">
+                  Deterministic Time Strategy
+                </span>
+              </div>
+
+              <p className="mt-4 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                Disciplined clock management, dynamic positional awareness, and rapid tactical execution under time pressure.
+              </p>
             </div>
 
-            {/* Chess Piece Illustration */}
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#C6F432]/20 bg-[#C6F432]/10 text-[#C6F432]">
-              <svg
-                viewBox="0 0 24 24"
-                width="32"
-                height="32"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-label="Chess Knight"
-              >
-                <path d="M19 20H5v-2c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2v2z" fill="#C6F432" fillOpacity="0.2" />
-                <path d="M16 16c0-3-1-4-2-5 1-1 1-3 0-4-1-1-3-1-4 0l-1 1c-1-1-3-1-4 0-1 1-1 3 0 4-1 1-2 2-2 5" />
-                <path d="M12 4v4" />
-                <circle cx="10" cy="9" r="1" fill="currentColor" />
-              </svg>
+            <div className="mt-6 pt-4 border-t border-blue-100/80 flex items-center gap-2 text-xs font-semibold text-blue-900">
+              <Zap size={14} className="text-blue-600" />
+              <span>Applied to engineering: Low-latency deterministic decision loops</span>
             </div>
           </div>
         </div>
 
-        {/* Card 2: Puzzles Solved with Puzzle Illustration */}
-        <div className="relative overflow-hidden rounded-xl border border-white/10 bg-[#161618] p-5 sm:p-6 transition hover:border-[#C6F432]/40">
-          <div className="flex items-start justify-between gap-4">
+        {/* Card 2: Tactical Puzzles Solved */}
+        <div className="relative overflow-hidden rounded-3xl border border-indigo-200/90 bg-gradient-to-br from-white via-indigo-50/40 to-purple-50/50 p-8 shadow-sm transition-all hover:border-indigo-400 hover:shadow-xl">
+          {/* Subtle Ambient Background Watermark */}
+          <div className="pointer-events-none absolute -right-6 -bottom-6 text-slate-900/5 select-none font-black text-9xl">
+            🧩
+          </div>
+
+          <div className="relative z-10 flex flex-col justify-between h-full">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wider text-[#C6F432]">
-                Puzzles Solved
-              </p>
-              <p className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-                {stats.puzzlesSolved.toLocaleString()}
-              </p>
-              <div className="mt-3 flex items-center gap-2 text-xs text-zinc-400">
-                <span className="rounded bg-white/5 px-2 py-0.5 text-zinc-300 font-medium">
-                  Rating: {stats.puzzleRating}
+              <div className="flex items-center justify-between gap-4">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-indigo-100/80 px-3 py-1 text-[11px] font-extrabold uppercase tracking-wider text-indigo-800">
+                  <Cpu size={13} />
+                  Tactical Puzzles Solved
                 </span>
-                <span>·</span>
-                <span>Peak: {stats.puzzlePeak}</span>
+                <span className="rounded-full bg-white px-2.5 py-0.5 text-[11px] font-bold text-indigo-700 border border-indigo-200 shadow-xs">
+                  4,500+ Verified
+                </span>
               </div>
+
+              {/* Huge Stat */}
+              <div className="mt-5 flex items-baseline gap-3">
+                <p className="text-5xl sm:text-6xl font-black tracking-tight text-slate-900">
+                  4,500+
+                </p>
+                <div className="flex flex-col">
+                  <span className="text-base font-extrabold text-indigo-700">Puzzles Solved</span>
+                  <span className="text-[11px] font-semibold text-slate-500">Complex Combinations</span>
+                </div>
+              </div>
+
+              {/* Sub-metrics */}
+              <div className="mt-4 flex flex-wrap items-center gap-2 text-xs">
+                <span className="rounded-lg bg-white border border-indigo-100 px-2.5 py-1 font-bold text-slate-800 shadow-xs">
+                  Combinatorial Pattern Recognition
+                </span>
+                <span className="rounded-lg bg-white border border-indigo-100 px-2.5 py-1 font-semibold text-slate-600 shadow-xs">
+                  Pruning &amp; Calculation
+                </span>
+              </div>
+
+              <p className="mt-4 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                Deep algorithmic pattern recognition, deterministic decision trees, and forward-calculation under complex constraints.
+              </p>
             </div>
 
-            {/* Puzzle Piece Illustration */}
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-[#C6F432]/20 bg-[#C6F432]/10 text-[#C6F432]">
-              <svg
-                viewBox="0 0 24 24"
-                width="32"
-                height="32"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-label="Puzzle Piece"
-              >
-                <path
-                  d="M19.439 7.85c0-1.571-.802-2.85-1.791-2.85H16V3.85c0-.989-1.279-1.79-2.85-1.79-1.571 0-2.85.801-2.85 1.79V5H8.35c-.989 0-1.79 1.279-1.79 2.85 0 1.571.801 2.85 1.79 2.85H9.5v2.85c0 .989-1.279 1.79-2.85 1.79-1.571 0-2.85-.801-2.85-1.79V12H2.65C1.66 12 .86 13.28.86 14.85c0 1.57.8 2.85 1.79 2.85H5v1.45c0 .99 1.28 1.79 2.85 1.79 1.57 0 2.85-.8 2.85-1.79V19.5h2.85c.99 0 1.79-1.28 1.79-2.85 0-1.57-.8-2.85-1.79-2.85H12v-2.85c0-.99 1.28-1.79 2.85-1.79 1.57 0 2.85.8 2.85 1.79V12h1.45c.99 0 1.79-1.28 1.79-2.85 0-.47-.07-.9-.19-1.3z"
-                  fill="#C6F432"
-                  fillOpacity="0.2"
-                />
-              </svg>
+            <div className="mt-6 pt-4 border-t border-indigo-100/80 flex items-center gap-2 text-xs font-semibold text-indigo-900">
+              <ShieldCheck size={14} className="text-indigo-600" />
+              <span>Applied to engineering: Edge-case elimination and branch pruning</span>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Strategic Transfer to AI & Engineering Banner */}
+      <div className="mt-8 rounded-2xl border border-indigo-100 bg-white/80 p-6 backdrop-blur-md">
+        <h4 className="text-xs font-extrabold uppercase tracking-wider text-slate-400">
+          How Competitive Chess Sharpens Software Engineering &amp; AI
+        </h4>
+        <div className="mt-4 grid gap-4 sm:grid-cols-3">
+          <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-4">
+            <p className="text-xs font-bold text-slate-900">1. Forward-Branch Pruning</p>
+            <p className="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Evaluating multi-ply candidate moves under constraints directly parallels designing deterministic state machines and tool-calling agent loops.
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-4">
+            <p className="text-xs font-bold text-slate-900">2. Pattern Recognition</p>
+            <p className="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Solving 4,500+ tactical puzzles builds acute instinct for edge cases, anomalies, and architectural vulnerabilities before they cause production faults.
+            </p>
+          </div>
+          <div className="rounded-xl border border-slate-100 bg-slate-50/70 p-4">
+            <p className="text-xs font-bold text-slate-900">3. Time &amp; Resource Economy</p>
+            <p className="mt-1 text-[11px] leading-relaxed text-slate-600">
+              Clock management in 10-minute games trains ruthless prioritization, matching asynchronous API latency and compute cost budgets in LLM pipelines.
+            </p>
           </div>
         </div>
       </div>

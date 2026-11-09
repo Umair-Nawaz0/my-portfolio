@@ -18,133 +18,107 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "appointment-assistant",
+    title: "AI Appointment Assistant & Workflow Automation Engine",
+    category: "AI Agents & Systems",
+    summary:
+      "Production multi-tenant appointment platform combining a React 18 chat portal with an asynchronous FastAPI backend and an autonomous n8n booking workflow powered by Google Gemini.",
+    technologies: ["FastAPI", "React 18", "TypeScript", "PostgreSQL", "n8n", "Docker"],
+    features: [
+      "Engineered function-calling tools for real-time slot checking and conflict-free commits",
+      "Dynamic RFC-5545 .ics calendar generation and dual-engine SQL fallback resilience",
+    ],
+    githubUrl: "https://github.com/Umair-Nawaz0/appointment-assistant",
+  },
+  {
+    slug: "meeting-scheduler",
+    title: "Autonomous AI Meeting Scheduling Agent",
+    category: "AI Agents & Systems",
+    summary:
+      "Containerized meeting orchestration pipeline using n8n to ingest webhook payloads, negotiate time slots, and provision video conferences.",
+    technologies: ["Python", "n8n", "Zoom API", "Google Calendar API", "Gmail API", "Docker"],
+    features: [
+      "Integrated Zoom Server-to-Server OAuth, Google Calendar, and Gmail APIs for room provisioning",
+      "Sub-5-second automated turnaround with health-checked Docker microservices",
+    ],
+    githubUrl: "https://github.com/Umair-Nawaz0/meeting-scheduler",
+  },
+  {
     slug: "svm-credit-card-fraud-detection",
-    title: "Credit Card Fraud & Risk Detection Pipeline",
+    title: "Financial Fraud Detection & Anomaly Classification",
     category: "Machine Learning",
     summary:
-      "Enterprise fraud classification pipeline evaluating 284,800+ transactions with severe class skew (<0.2% fraud). Leveraged SMOTE oversampling and LinearSVC to optimize cost-sensitive decision boundaries.",
+      "End-to-end anomaly detection pipeline on 284,000+ financial transactions with acute class skew (0.17% fraud prevalence) utilizing SMOTE and LinearSVC.",
     technologies: ["Python", "Scikit-Learn", "SMOTE (Imbalanced-Learn)", "LinearSVC", "Pandas", "NumPy"],
     features: [
-      "90.82% Recall on fraudulent transactions (intercepted 89 of 98 fraud cases)",
-      "StandardScaler feature normalization across 30 PCA transaction dimensions",
+      "Achieved a 90.82% fraud interception recall rate with 97.73% overall accuracy",
+      "Standardized 30 high-dimensional feature vectors to prevent synthetic data leakage",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/svm-credit-card-fraud-detection",
   },
   {
-    slug: "decision-tree-heart-disease-prediction",
-    title: "Cardiovascular Disease Detection (Decision Tree)",
+    slug: "hierarchical-clustering-customer-segmentation",
+    title: "Customer Segmentation via Hierarchical Clustering",
     category: "Machine Learning",
     summary:
-      "Interpretable clinical decision-support diagnostic model trained on 1,025 patient records across 13 physiological biomarkers. Achieved near-perfect diagnostic screening accuracy with zero false positives.",
-    technologies: ["Python", "Scikit-Learn", "Decision Trees", "StandardScaler", "Pandas"],
+      "Agglomerative hierarchical clustering with Ward's minimum-variance linkage and SciPy dendrograms, processing 541,000+ transaction lines into RFM customer behavioral profiles.",
+    technologies: ["Python", "Scikit-Learn", "SciPy", "Agglomerative Clustering", "PCA", "Pandas"],
     features: [
-      "98.54% Accuracy, 100% Precision (0 False Positives on N=205 test set)",
-      "Deterministic, rule-based clinical explainability for medical practitioners",
+      "Standardized features and applied 2-component PCA preserving 97.39% of variance",
+      "Ward-linkage dendrogram mathematically validating 3 distinct behavioral customer cohorts",
     ],
-    githubUrl: "https://github.com/Umair-Nawaz0/decision-tree-heart-disease-prediction",
+    githubUrl: "https://github.com/Umair-Nawaz0/hierarchical-clustering-customer-segmentation",
+  },
+  {
+    slug: "hostel-project",
+    title: "Full-Stack Hostel Management System",
+    category: "Full-Stack Web",
+    summary:
+      "Full-stack student housing operations platform managing rooms, resident allocations, staff administration, and fee tracking via modular MVC APIs.",
+    technologies: ["Node.js", "Express.js", "MySQL", "AWS RDS", "Modular MVC", "RESTful APIs"],
+    features: [
+      "Architected a normalized 25-table relational schema on AWS RDS with strict referential integrity",
+      "Modular RESTful API endpoints with input validation and role-based access control (RBAC)",
+    ],
+    githubUrl: "https://github.com/Umair-Nawaz0/hostel_project",
+  },
+  {
+    slug: "bank-management-system",
+    title: "International Banking Management System",
+    category: "Systems & C++",
+    summary:
+      "Terminal-based international banking engine engineered in modern C++17 applying core OOP principles: class inheritance, polymorphism, and state encapsulation.",
+    technologies: ["Modern C++17", "OOP Architecture", "File I/O", "Data Persistence", "CMake"],
+    features: [
+      "Credential authentication, input validation routines, and inter-account balance transfers",
+      "Flat-file transaction audit persistence via CSV ledger serialization with zero memory leaks",
+    ],
+    githubUrl: "https://github.com/Umair-Nawaz0/bank-management-system",
   },
   {
     slug: "decision-tree-loan-default-risk-prediction",
     title: "Cost-Sensitive Loan Default Risk Classification",
     category: "Machine Learning",
     summary:
-      "Banking credit risk scoring engine that replaces naive accuracy optimization with cost-sensitive class balancing and 5-fold GridSearchCV, maximizing loan default detection to protect financial capital.",
-    technologies: ["Python", "Scikit-Learn", "GridSearchCV", "Cost-Sensitive Learning", "Pandas"],
+      "Financial credit risk classifier addressing asymmetric default loss on the German Credit Dataset using cost-sensitive class balancing and 5-fold GridSearchCV.",
+    technologies: ["Python", "Scikit-Learn", "Decision Trees", "GridSearchCV", "Pandas"],
     features: [
-      "Elevated bad borrower default recall nearly 6x (from 11.67% to 68.33%)",
-      "5-fold cross-validation tuned specifically for recall maximization",
+      "Tuned hyperparameters specifically for defaulter recall, boosting detection from 11.67% to 68.33%",
+      "Cost-sensitive balancing (class_weight='balanced') protecting financial capital",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/decision-tree-loan-default-risk-prediction",
-  },
-  {
-    slug: "kmeans-customer-segmentation",
-    title: "Customer Market Segmentation (2D & 3D PCA)",
-    category: "Machine Learning",
-    summary:
-      "Unsupervised behavioral market segmentation combining K-Means++ clustering and Principal Component Analysis. Renders interactive 2D and 3D spatial cluster projections with centroid tracking.",
-    technologies: ["Python", "Scikit-Learn", "PCA", "K-Means++", "Matplotlib", "SciPy"],
-    features: [
-      "Elbow Method (WCSS) heuristic identifying optimal k=4 customer cohorts",
-      "Interactive 2D & 3D PCA spatial projections capturing maximum variance",
-    ],
-    githubUrl: "https://github.com/Umair-Nawaz0/kmeans-customer-segmentation",
-  },
-  {
-    slug: "hierarchical-clustering-customer-segmentation",
-    title: "Hierarchical Customer Clustering & Dendrograms",
-    category: "Machine Learning",
-    summary:
-      "Agglomerative hierarchical clustering with Ward's minimum variance linkage and SciPy dendrograms. Aggregated 541,000+ transaction lines into 4,372 customer behavioral profiles.",
-    technologies: ["Python", "SciPy", "Hierarchical Clustering", "PCA", "Pandas", "Matplotlib"],
-    features: [
-      "Preserved 97.39% of variance across 2 principal components via PCA",
-      "Ward linkage dendrogram mathematically validating 3 natural customer tiers",
-    ],
-    githubUrl: "https://github.com/Umair-Nawaz0/hierarchical-clustering-customer-segmentation",
-  },
-  {
-    slug: "knn-diabetes-prediction",
-    title: "Clinical Diabetes Screening Model (KNN)",
-    category: "Machine Learning",
-    summary:
-      "Non-parametric clinical diagnostic screening model using K-Nearest Neighbors on 768 patient biomarker records. Applies Z-score normalization and correlation-based feature selection.",
-    technologies: ["Python", "Scikit-Learn", "KNN", "StandardScaler", "Plotly", "Pandas"],
-    features: [
-      "Distance-based patient neighbor mapping based on glucose and BMI biomarkers",
-      "Neighborhood tuning across K=5 and K=7 for optimal diagnostic recall",
-    ],
-    githubUrl: "https://github.com/Umair-Nawaz0/knn-diabetes-prediction",
-  },
-  {
-    slug: "appointment-assistant",
-    title: "AI Appointment Assistant & Receptionist Platform",
-    category: "AI Agents & Systems",
-    summary:
-      "Production-oriented multi-tenant AI conversational booking platform with an asynchronous FastAPI backend, PostgreSQL database, and modern React management dashboard.",
-    technologies: ["FastAPI", "React 18", "TypeScript", "PostgreSQL", "asyncpg", "Docker Compose"],
-    features: [
-      "Deterministic conversational state machine with dynamic slot conflict detection",
-      "Strict multi-tenant schema isolation with zero cross-tenant data leakage",
-    ],
-    githubUrl: "https://github.com/Umair-Nawaz0/appointment-assistant",
-  },
-  {
-    slug: "meeting-scheduler",
-    title: "Autonomous AI Meeting Scheduler Service",
-    category: "AI Agents & Systems",
-    summary:
-      "Containerized agentic workflow service orchestrating Google Gemini LLM intent parsing, Zoom Server-to-Server OAuth, Google Calendar synchronization, and automated email invites.",
-    technologies: ["n8n", "Docker", "Docker Compose", "Google Gemini API", "Zoom OAuth", "Calendar API"],
-    features: [
-      "Natural language request parsing to extract participant time and agenda",
-      "Sub-5-second turnaround from incoming webhook to calendar & Zoom generation",
-    ],
-    githubUrl: "https://github.com/Umair-Nawaz0/meeting-scheduler",
   },
   {
     slug: "fast-research-portal",
     title: "FAST Academic Research & Project Exchange",
     category: "Full-Stack Web",
     summary:
-      "Full-stack academic research opportunity discovery platform connecting university students with active faculty research labs and thesis grants using Next.js App Router and FastAPI.",
-    technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "SQLite", "TailwindCSS"],
+      "Full-stack academic research opportunity discovery platform connecting FAST-NUCES students with active faculty research labs and thesis grants using Next.js and FastAPI.",
+    technologies: ["Next.js", "TypeScript", "FastAPI", "Python", "REST APIs", "TailwindCSS"],
     features: [
-      "Role-based applicant management, candidate filtering, and proposal submission",
+      "Role-based applicant management, candidate filtering, and proposal submission workflows",
       "Comprehensive Postman test collection with OpenAPI interactive documentation",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/fast-research-portal",
-  },
-  {
-    slug: "bank-management-system",
-    title: "International Banking Management System (C++17)",
-    category: "Systems & C++",
-    summary:
-      "Terminal-based international banking engine built with modern C++17, OOP architecture, persistent CSV ledger storage, and defensive input validation preventing buffer overflows.",
-    technologies: ["C++17", "CMake", "POSIX", "OOP Architecture", "File Streams"],
-    features: [
-      "1,200+ lines of robust C++17 application logic with zero runtime memory leaks",
-      "Full persistence of account balances, transactions, and role credentials",
-    ],
-    githubUrl: "https://github.com/Umair-Nawaz0/bank-management-system",
   },
 ];

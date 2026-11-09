@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0B0B0C;
-  --foreground: #FFFFFF;
-  --muted: #a1a1aa;
-  --border: rgba(255, 255, 255, 0.1);
-  --accent: #C6F432;
-  --accent-foreground: #0B0B0C;
-  color-scheme: dark;
+  --background: #F8FAFC;
+  --foreground: #0F172A;
+  --muted: #475569;
+  --border: #E2E8F0;
+  --primary: #4F46E5;
+  --primary-hover: #4338CA;
+  --secondary: #0284C7;
+  --accent: #7C3AED;
+  color-scheme: light;
 }
 
 * {
@@ -16,16 +18,21 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #0B0B0C;
+  background-color: #F8FAFC;
 }
 
 body {
   margin: 0;
-  background-color: #0B0B0C;
-  color: #FFFFFF;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #F8FAFC;
+  color: #0F172A;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+  background-image: 
+    radial-gradient(rgba(99, 102, 241, 0.12) 1px, transparent 1px),
+    radial-gradient(rgba(148, 163, 184, 0.20) 1px, transparent 1px);
+  background-size: 32px 32px, 16px 16px;
+  background-position: 0 0, 16px 16px;
 }
 
 input,
@@ -45,76 +52,116 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid #C6F432;
+  outline: 2px solid #4F46E5;
   outline-offset: 3px;
 }
 
 ::selection {
-  background: rgba(198, 244, 50, 0.35);
-  color: #0B0B0C;
+  background: rgba(99, 102, 241, 0.25);
+  color: #0F172A;
 }
 
 /* --------------------------------
-   Layout
+   Layout Container
 -------------------------------- */
 
 .container {
-  width: min(100% - 2rem, 1200px);
+  width: min(100% - 2.5rem, 1220px);
   margin-inline: auto;
 }
 
 @media (min-width: 768px) {
   .container {
-    width: min(100% - 4rem, 1200px);
+    width: min(100% - 4rem, 1220px);
   }
 }
 
 /* --------------------------------
-   Text
+   Typography & Vibrant Gradients
 -------------------------------- */
 
 .text-gradient {
-  background: linear-gradient(
-    105deg,
-    #FFFFFF 25%,
-    #C6F432 100%
-  );
+  background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 30%, #6366F1 70%, #8B5CF6 100%);
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  color: transparent !important;
 }
 
-.text-lime {
-  color: #C6F432;
+.text-gradient-purple {
+  background: linear-gradient(135deg, #4338CA 0%, #7C3AED 50%, #C026D3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #0369A1 0%, #2563EB 50%, #4F46E5 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+}
+
+.text-gradient-emerald {
+  background: linear-gradient(135deg, #047857 0%, #059669 50%, #0D9488 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
 }
 
 .section-label {
-  color: #C6F432;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #1D4ED8 0%, #4F46E5 60%, #7C3AED 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
 }
 
 /* --------------------------------
-   Cards
+   Modern Frosted Glass Cards
 -------------------------------- */
 
 .glass-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: #121214;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 1.25rem;
+  box-shadow: 
+    0 10px 30px -5px rgba(99, 102, 241, 0.06),
+    0 4px 12px -2px rgba(15, 23, 42, 0.03),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transition: all 240ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(198, 244, 50, 0.4);
-  box-shadow: 0 0 30px rgba(198, 244, 50, 0.06);
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 
+    0 20px 40px -10px rgba(79, 70, 229, 0.16),
+    0 6px 18px -3px rgba(15, 23, 42, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
+  transform: translateY(-3px);
+}
+
+.glass-card-featured {
+  border: 1px solid rgba(199, 210, 254, 0.9);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 248, 255, 0.9) 100%);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 16px 40px -8px rgba(79, 70, 229, 0.10),
+    0 4px 12px -2px rgba(15, 23, 42, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 1);
 }
 
 /* --------------------------------
-   Buttons
+   Buttons (High-Impact Modern Tech)
 -------------------------------- */
 
 .primary-button {
@@ -122,24 +169,26 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border: 1px solid #C6F432;
-  background: #C6F432;
-  color: #0B0B0C;
-  padding: 0.65rem 1.4rem;
+  background: linear-gradient(135deg, #1D4ED8 0%, #4F46E5 50%, #7C3AED 100%);
+  color: #FFFFFF !important;
+  border: none;
+  padding: 0.75rem 1.6rem;
   font-size: 0.875rem;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 9999px;
   cursor: pointer;
-  transition:
-    transform 160ms ease,
-    background 160ms ease,
-    box-shadow 160ms ease;
+  box-shadow: 
+    0 4px 18px rgba(79, 70, 229, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .primary-button:hover {
-  background: #d4f854;
   transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(198, 244, 50, 0.35);
+  box-shadow: 
+    0 8px 26px rgba(79, 70, 229, 0.50),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  opacity: 0.97;
 }
 
 .primary-button:active {
@@ -151,30 +200,54 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
-  color: #FFFFFF;
-  padding: 0.65rem 1.4rem;
+  border: 1px solid rgba(203, 213, 225, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  color: #1E293B !important;
+  padding: 0.75rem 1.6rem;
   font-size: 0.875rem;
   font-weight: 600;
   border-radius: 9999px;
   cursor: pointer;
-  transition:
-    background 160ms ease,
-    border-color 160ms ease,
-    color 160ms ease,
-    transform 160ms ease;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.05);
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .secondary-button:hover {
-  border-color: #C6F432;
-  background: rgba(198, 244, 50, 0.08);
-  color: #C6F432;
+  border-color: #6366F1;
+  background: #FFFFFF;
+  color: #4338CA !important;
   transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.16);
 }
 
 .secondary-button:active {
   transform: translateY(0);
+}
+
+/* --------------------------------
+   Tech & Badge Pills
+-------------------------------- */
+
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background: rgba(241, 245, 249, 0.85);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  color: #334155;
+  transition: all 140ms ease;
+}
+
+.tech-badge:hover {
+  background: #FFFFFF;
+  border-color: #818CF8;
+  color: #4338CA;
+  transform: translateY(-1px);
 }
 
 /* --------------------------------
@@ -186,14 +259,14 @@ a {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0B0C;
+  background: #F1F5F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #94A3B8;
 }

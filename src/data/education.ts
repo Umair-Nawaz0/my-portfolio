@@ -9,16 +9,16 @@ export type EducationItem = {
 
 export const education: EducationItem[] = [
   {
-    stage: "BS Computer Science",
-    institution: "FAST NUCES (National University of Computer & Emerging Sciences)",
-    focus: "Artificial Intelligence, Systems Architecture & Software Engineering",
-    period: "2022 — Present",
+    stage: "Bachelor of Science in Computer Science (BSCS)",
+    institution: "FAST National University of Computer and Emerging Sciences (FAST-NUCES)",
+    focus: "Agentic AI Systems, Machine Learning Pipelines & Backend Engineering",
+    period: "August 2024 — June 2028 (Expected)",
     coursework: [
-      "Artificial Intelligence & Machine Learning",
       "Data Structures & Algorithms",
       "Object-Oriented Programming (C++)",
-      "Database Systems & Advanced SQL",
-      "Operating Systems & Computer Networks",
+      "Operating Systems",
+      "Database Systems",
+      "Machine Learning & Artificial Intelligence",
       "Software Design & Architecture",
     ],
   },

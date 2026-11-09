@@ -4,20 +4,55 @@ import Hero from "@/components/home/Hero";
 import AboutSection from "@/components/home/AboutSection";
 import FeaturedProjects from "@/components/home/FeaturedProjects";
 import TechStack from "@/components/home/TechStack";
+import ChessLiveCard from "@/components/home/ChessLiveCard";
 import ContactSection from "@/components/home/ContactSection";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen bg-[#0B0B0C] text-[#FFFFFF] overflow-x-hidden">
-      {/* Ambient Lime Glow from the screenshot */}
-      <div className="pointer-events-none absolute left-1/2 top-10 -translate-x-1/2 h-[500px] w-[900px] rounded-full bg-[#C6F432]/[0.08] blur-[140px]" />
-      <div className="pointer-events-none absolute right-0 top-[40%] h-[400px] w-[500px] rounded-full bg-[#C6F432]/[0.04] blur-[150px]" />
+    <div className="relative min-h-screen bg-slate-50/70 text-slate-900 overflow-x-hidden">
+      {/* Vibrant Multi-Layer Ambient Tech Light Mesh (Strictly Bright / Light Theme) */}
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+        {/* Top Center Radiant Blue/Indigo Aura */}
+        <div className="absolute left-1/2 top-[-100px] -translate-x-1/2 h-[650px] w-[1100px] rounded-full bg-gradient-to-b from-blue-300/35 via-indigo-200/25 to-transparent blur-[130px]" />
+        
+        {/* Right Accent Soft Violet Glow */}
+        <div className="absolute right-[-15%] top-[25%] h-[600px] w-[750px] rounded-full bg-gradient-to-bl from-violet-200/30 via-indigo-100/20 to-transparent blur-[150px]" />
+        
+        {/* Left Accent Cyan/Sky Glow */}
+        <div className="absolute left-[-15%] top-[55%] h-[650px] w-[800px] rounded-full bg-gradient-to-tr from-sky-200/35 via-blue-100/25 to-transparent blur-[160px]" />
+
+        {/* Bottom Ambient Indigo Glow */}
+        <div className="absolute right-[-10%] bottom-[5%] h-[550px] w-[700px] rounded-full bg-gradient-to-tl from-indigo-200/30 via-purple-100/20 to-transparent blur-[140px]" />
+      </div>
 
       <div className="relative z-10">
         <Navbar />
         <main>
           <Hero />
           <AboutSection />
+          
+          {/* Prominent Chess & Strategic Problem Solving Section */}
+          <section id="chess" className="relative border-y border-indigo-100/80 py-24 bg-gradient-to-b from-blue-50/60 via-indigo-50/30 to-slate-50/80">
+            {/* Subtle decorative grid lines */}
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.04]" />
+            <div className="container relative z-10">
+              <div className="max-w-3xl mb-10">
+                <span className="section-label">
+                  <span className="inline-block h-2 w-2 rounded-full bg-indigo-600 animate-pulse" />
+                  Strategic Decision-Making &amp; Algorithmic Thinking
+                </span>
+                <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
+                  Competitive Chess &amp; <span className="text-gradient">Tactical Problem Solving</span>
+                </h2>
+                <p className="mt-3 text-base text-slate-600 leading-relaxed max-w-2xl">
+                  Applying deep calculation trees, deterministic pruning, and pattern recognition developed across thousands of competitive matches to software architectures and autonomous agent systems.
+                </p>
+              </div>
+
+              <ChessLiveCard />
+            </div>
+          </section>
+
           <FeaturedProjects />
           <TechStack />
           <ContactSection />
