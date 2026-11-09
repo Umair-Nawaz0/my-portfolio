@@ -159,7 +159,7 @@ export default function Hero() {
                   ♟
                 </span>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Tactics</p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Chess</p>
                   <p className="text-xs font-extrabold text-slate-900">1300+ Rapid Elo</p>
                 </div>
               </div>

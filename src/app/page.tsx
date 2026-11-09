@@ -31,22 +31,17 @@ export default function Home() {
           <Hero />
           <AboutSection />
           
-          {/* Prominent Chess & Strategic Problem Solving Section */}
-          <section id="chess" className="relative border-y border-indigo-100/80 py-24 bg-gradient-to-b from-blue-50/60 via-indigo-50/30 to-slate-50/80">
-            {/* Subtle decorative grid lines */}
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.04]" />
+          {/* Competitive Chess Section */}
+          <section id="chess" className="relative border-y border-indigo-100/70 py-16 bg-gradient-to-b from-blue-50/40 via-indigo-50/20 to-slate-50/60">
             <div className="container relative z-10">
-              <div className="max-w-3xl mb-10">
+              <div className="max-w-xl mb-8">
                 <span className="section-label">
-                  <span className="inline-block h-2 w-2 rounded-full bg-indigo-600 animate-pulse" />
-                  Strategic Decision-Making &amp; Algorithmic Thinking
+                  <span className="inline-block h-2 w-2 rounded-full bg-indigo-600" />
+                  Chess Profile
                 </span>
-                <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl md:text-5xl">
-                  Competitive Chess &amp; <span className="text-gradient">Tactical Problem Solving</span>
+                <h2 className="mt-2 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                  Competitive Chess
                 </h2>
-                <p className="mt-3 text-base text-slate-600 leading-relaxed max-w-2xl">
-                  Applying deep calculation trees, deterministic pruning, and pattern recognition developed across thousands of competitive matches to software architectures and autonomous agent systems.
-                </p>
               </div>
 
               <ChessLiveCard />
