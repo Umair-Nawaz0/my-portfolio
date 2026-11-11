@@ -48,11 +48,11 @@ export const projects: Project[] = [
     title: "Financial Fraud Detection & Anomaly Classification",
     category: "Machine Learning",
     summary:
-      "End-to-end anomaly detection pipeline on 284,000+ financial transactions with acute class skew (0.17% fraud prevalence) utilizing SMOTE and LinearSVC.",
+      "LinearSVC fraud-classification pipeline on 284,807 transactions with acute class skew (0.17% fraud prevalence) applying SMOTE only to the training split.",
     technologies: ["Python", "Scikit-Learn", "SMOTE (Imbalanced-Learn)", "LinearSVC", "Pandas", "NumPy"],
     features: [
-      "Achieved a 90.82% fraud interception recall rate with 97.73% overall accuracy",
-      "Standardized 30 high-dimensional feature vectors to prevent synthetic data leakage",
+      "Achieved 90.82% fraud recall (89/98 cases) at 6.48% precision, highlighting the false-positive trade-off",
+      "Standardized 30 high-dimensional feature vectors to avoid synthetic data leakage into evaluation",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/svm-credit-card-fraud-detection",
   },
@@ -61,11 +61,11 @@ export const projects: Project[] = [
     title: "Customer Segmentation via Hierarchical Clustering",
     category: "Machine Learning",
     summary:
-      "Agglomerative hierarchical clustering with Ward's minimum-variance linkage and SciPy dendrograms, processing 541,000+ transaction lines into RFM customer behavioral profiles.",
+      "Agglomerative hierarchical clustering with Ward's minimum-variance linkage, aggregating 541,909 transaction line items into customer-level behavioral profiles across 4,372 accounts.",
     technologies: ["Python", "Scikit-Learn", "SciPy", "Agglomerative Clustering", "PCA", "Pandas"],
     features: [
       "Standardized features and applied 2-component PCA preserving 97.39% of variance",
-      "Ward-linkage dendrogram mathematically validating 3 distinct behavioral customer cohorts",
+      "Ward-linkage dendrogram analysis segmenting customers into three behavioral cohorts",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/hierarchical-clustering-customer-segmentation",
   },
@@ -74,11 +74,11 @@ export const projects: Project[] = [
     title: "Full-Stack Hostel Management System",
     category: "Full-Stack Web",
     summary:
-      "Full-stack student housing operations platform managing rooms, resident allocations, staff administration, and fee tracking via modular MVC APIs.",
-    technologies: ["Node.js", "Express.js", "MySQL", "AWS RDS", "Modular MVC", "RESTful APIs"],
+      "Team-built student housing operations platform managing rooms, resident allocations, staff administration, and fee tracking via modular MVC APIs.",
+    technologies: ["Node.js", "Express.js", "MySQL", "Modular MVC", "RESTful APIs"],
     features: [
-      "Architected a normalized 25-table relational schema on AWS RDS with strict referential integrity",
-      "Modular RESTful API endpoints with input validation and role-based access control (RBAC)",
+      "Architected relational schema tables with foreign keys and modular RESTful API endpoints",
+      "Contributed administrative operations for resident allocation, room records, and fee tracking",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/hostel_project",
   },
@@ -87,11 +87,11 @@ export const projects: Project[] = [
     title: "International Banking Management System",
     category: "Systems & C++",
     summary:
-      "High-integrity banking engine engineered in modern C++17 utilizing memory-safe OOP design patterns, runtime polymorphism, and strict state encapsulation.",
+      "Terminal-based banking management application engineered in modern C++17 utilizing encapsulation, inheritance, and polymorphism.",
     technologies: ["Modern C++17", "OOP Architecture", "File Stream Serialization", "Data Persistence", "CMake"],
     features: [
-      "Credential authentication routines, defensive input validation, and atomic balance transfers",
-      "Low-level file stream persistence via CSV serialization with zero memory leaks",
+      "Credential authentication routines, defensive input validation, and inter-account transfers",
+      "Flat-file transaction audit persistence via CSV ledger serialization",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/bank-management-system",
   },

@@ -1,8 +1,8 @@
 export const profile = {
   fullName: "Sardar Umair Nawaz Khan",
   displayName: "Sardar Umair",
-  role: "AI Systems & Machine Learning Engineer",
-  bio: "Computer Science undergraduate at FAST-NUCES specializing in Agentic AI systems, workflow automation, and high-performance backend architectures. Hands-on experience architecting end-to-end full-stack AI applications, resilient automation workflows, and scalable backend APIs.",
+  role: "AI/ML & Backend Developer",
+  bio: "Computer Science undergraduate at FAST-NUCES focused on AI-powered applications, machine learning, and backend engineering. Hands-on experience building LLM-powered automation workflows, REST APIs, and machine learning pipelines using Python, FastAPI, LangChain, n8n, and Scikit-learn.",
   location: "Peshawar / Bahawalpur, Pakistan (Open to Relocation & Remote)",
   fullAddress: "Peshawar / Bahawalpur, Pakistan (Open to Relocation & Remote)",
   email: "sardarumairnawazkhan@gmail.com",

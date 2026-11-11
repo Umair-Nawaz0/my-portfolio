@@ -38,7 +38,7 @@ export default function Hero() {
 
             {/* Summary Matching ATS Resume */}
             <p className="mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-              Computer Science undergraduate at <strong className="font-semibold text-slate-800">FAST-NUCES</strong> specializing in <strong className="font-semibold text-slate-800">Agentic AI systems</strong>, Machine Learning architectures, and high-performance backend pipelines. Experienced in training predictive models with PyTorch &amp; Scikit-learn, engineering autonomous multi-tool LLM workflows with LangChain &amp; n8n, and designing asynchronous RESTful APIs in FastAPI, Node.js, and PHP. Hands-on experience architecting end-to-end full-stack AI applications, resilient automation workflows, and scalable backend APIs.
+              Computer Science undergraduate at <strong className="font-semibold text-slate-800">FAST-NUCES</strong> focused on AI-powered applications, machine learning, and backend engineering. Hands-on experience building LLM-powered automation workflows, REST APIs, and machine learning pipelines using Python, FastAPI, LangChain, n8n, and Scikit-learn. Experienced in integrating external APIs, relational databases, and Docker-based services.
             </p>
 
             {/* Quick Metrics Bar */}
