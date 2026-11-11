@@ -22,7 +22,7 @@ export const projects: Project[] = [
     title: "AI Appointment Assistant & Workflow Automation Engine",
     category: "AI Agents & Systems",
     summary:
-      "Production multi-tenant appointment platform combining a React 18 chat portal with an asynchronous FastAPI backend and an autonomous n8n booking workflow powered by Google Gemini.",
+      "Modular multi-tenant appointment architecture with containerized Docker deployment, combining a React 18 chat portal with an asynchronous FastAPI backend and an autonomous n8n booking workflow powered by Google Gemini.",
     technologies: ["FastAPI", "React 18", "TypeScript", "PostgreSQL", "n8n", "Docker"],
     features: [
       "Engineered function-calling tools for real-time slot checking and conflict-free commits",
@@ -87,11 +87,11 @@ export const projects: Project[] = [
     title: "International Banking Management System",
     category: "Systems & C++",
     summary:
-      "Terminal-based international banking engine engineered in modern C++17 applying core OOP principles: class inheritance, polymorphism, and state encapsulation.",
-    technologies: ["Modern C++17", "OOP Architecture", "File I/O", "Data Persistence", "CMake"],
+      "High-integrity banking engine engineered in modern C++17 utilizing memory-safe OOP design patterns, runtime polymorphism, and strict state encapsulation.",
+    technologies: ["Modern C++17", "OOP Architecture", "File Stream Serialization", "Data Persistence", "CMake"],
     features: [
-      "Credential authentication, input validation routines, and inter-account balance transfers",
-      "Flat-file transaction audit persistence via CSV ledger serialization with zero memory leaks",
+      "Credential authentication routines, defensive input validation, and atomic balance transfers",
+      "Low-level file stream persistence via CSV serialization with zero memory leaks",
     ],
     githubUrl: "https://github.com/Umair-Nawaz0/bank-management-system",
   },
