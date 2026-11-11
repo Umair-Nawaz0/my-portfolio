@@ -14,6 +14,7 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       { name: "PyTorch", link: "https://pytorch.org" },
       { name: "Scikit-Learn" },
+      { name: "NLP (Natural Language Processing)" },
       { name: "Machine Learning Workflows" },
       { name: "Data Preprocessing" },
       { name: "Model Fine-Tuning" },
