@@ -12,12 +12,12 @@ const groupColors: Record<string, { borderTop: string; badge: string; text: stri
     badge: "bg-blue-50 text-blue-700 border-blue-200",
     text: "text-blue-700",
   },
-  "Backend & Systems": {
+  "Full-Stack & Backend Systems": {
     borderTop: "border-t-emerald-500",
     badge: "bg-emerald-50 text-emerald-700 border-emerald-200",
     text: "text-emerald-700",
   },
-  "Frontend & Engineering Tools": {
+  "Databases & DevOps Tools": {
     borderTop: "border-t-indigo-500",
     badge: "bg-indigo-50 text-indigo-700 border-indigo-200",
     text: "text-indigo-700",

@@ -7,30 +7,30 @@ const pillars = [
     title: "Autonomous AI Agents",
     gradient: "from-blue-600 to-indigo-600",
     borderTop: "border-t-blue-500",
-    badge: "LangChain · n8n · Gemini API",
+    badge: "LangChain · LangGraph · n8n",
     badgeColor: "bg-blue-50 text-blue-700 border-blue-200",
     description:
-      "Architecting multi-tenant conversational agents, deterministic state machines, and dynamic LLM tool calling with LangChain and n8n to automate complex business workflows and calendar scheduling.",
+      "Architecting multi-tenant conversational agents, deterministic state machines, and dynamic LLM tool calling with LangChain, LangGraph, and n8n to automate complex business workflows and agentic pipelines.",
   },
   {
     icon: BrainCircuit,
     title: "Machine Learning & Deep Learning",
     gradient: "from-indigo-600 to-purple-600",
     borderTop: "border-t-indigo-500",
-    badge: "PyTorch · Scikit-learn · PCA",
+    badge: "PyTorch · Scikit-learn · Fine-Tuning",
     badgeColor: "bg-purple-50 text-purple-700 border-purple-200",
     description:
-      "Developing production-oriented ML pipelines: training neural networks in PyTorch, addressing acute class skew with SMOTE in Scikit-learn, and engineering unsupervised hierarchical clustering with PCA.",
+      "Developing robust ML workflows and data preprocessing pipelines: training neural networks in PyTorch, model fine-tuning, and engineering predictive models with Scikit-learn.",
   },
   {
     icon: Cpu,
-    title: "High-Performance Backend & Systems",
+    title: "Full-Stack & Backend Systems",
     gradient: "from-emerald-600 to-teal-600",
     borderTop: "border-t-emerald-500",
-    badge: "FastAPI · PostgreSQL · C++17",
+    badge: "Next.js · FastAPI · PostgreSQL",
     badgeColor: "bg-emerald-50 text-emerald-700 border-emerald-200",
     description:
-      "Engineering asynchronous RESTful microservices with FastAPI and Node.js, managing normalized relational schemas in PostgreSQL and MySQL, and developing low-level systems in modern C++17.",
+      "Engineering full-stack web applications and asynchronous RESTful microservices with Next.js, React, FastAPI, and Node.js, managing normalized relational schemas in PostgreSQL and low-level C++17 systems.",
   },
 ];
 
